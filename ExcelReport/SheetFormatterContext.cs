@@ -66,6 +66,7 @@ namespace ExcelReport
                 Sheet.ShiftRows(insertRowIndex, Sheet.LastRowNum, 1, true, false);
             }
             var newRow = Sheet.CreateRow(GetCurrentRowIndex(templateRowIndex + 1));
+            newRow.Height = templateRow.Height;
             _increaseRowsCount++;
             foreach (var cell in templateRow.Cells)
             {
