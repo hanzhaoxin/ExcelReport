@@ -58,8 +58,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CellSpan.cs" />
     <Compile Include="Export\Export.cs" />
     <Compile Include="Export\ExportHelper.cs" />
+    <Compile Include="Extend\ICellExtend.cs" />
     <Compile Include="Formatter\CellFormatter.cs" />
     <Compile Include="Formatter\ElementFormatter.cs" />
     <Compile Include="Formatter\TableFormatter\TableFormatter.cs" />

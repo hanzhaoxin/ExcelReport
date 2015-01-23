@@ -9,3 +9,14 @@ E:\MyProject\ExcelReport\ExcelReport\bin\Release\NPOI.OOXML.xml
 E:\MyProject\ExcelReport\ExcelReport\bin\Release\NPOI.OpenXml4Net.xml
 E:\MyProject\ExcelReport\ExcelReport\obj\Release\ExcelReport.dll
 E:\MyProject\ExcelReport\ExcelReport\obj\Release\ExcelReport.pdb
+G:\GitHub\ExcelReport\ExcelReport\bin\Release\ExcelReport.dll
+G:\GitHub\ExcelReport\ExcelReport\bin\Release\ExcelReport.pdb
+G:\GitHub\ExcelReport\ExcelReport\bin\Release\NPOI.dll
+G:\GitHub\ExcelReport\ExcelReport\bin\Release\NPOI.OOXML.dll
+G:\GitHub\ExcelReport\ExcelReport\bin\Release\NPOI.OpenXml4Net.dll
+G:\GitHub\ExcelReport\ExcelReport\bin\Release\NPOI.OpenXmlFormats.dll
+G:\GitHub\ExcelReport\ExcelReport\bin\Release\NPOI.xml
+G:\GitHub\ExcelReport\ExcelReport\bin\Release\NPOI.OOXML.xml
+G:\GitHub\ExcelReport\ExcelReport\bin\Release\NPOI.OpenXml4Net.xml
+G:\GitHub\ExcelReport\ExcelReport\obj\Release\ExcelReport.dll
+G:\GitHub\ExcelReport\ExcelReport\obj\Release\ExcelReport.pdb

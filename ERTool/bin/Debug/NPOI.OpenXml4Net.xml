@@ -6,29 +6,29 @@
     <members>
         <member name="T:NPOI.OpenXml4Net.OPC.CertificateEmbeddingOption">
              Specifies the location where the X.509 certificate that is used in signing is stored.
-            
+
              @author Julien Chable
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.CertificateEmbeddingOption.IN_CERTIFICATE_PART">
-            The certificate is embedded in its own PackagePart. 
+            The certificate is embedded in its own PackagePart.
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.CertificateEmbeddingOption.IN_SIGNATURE_PART">
-            The certificate is embedded in the SignaturePart that is created for the signature being added. 
+            The certificate is embedded in the SignaturePart that is created for the signature being added.
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.CertificateEmbeddingOption.NOT_EMBEDDED">
-            The certificate in not embedded in the package. 
+            The certificate in not embedded in the package.
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.Configuration">
              Storage class for configuration storage parameters.
              TODO xml syntax checking is no longer done with DOM4j parser -> remove the schema or do it ?
-            
+
              @author CDubettier, Julen Chable
              @version 1.0
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.ContentTypes">
              Open Packaging Convention content types (see Annex F : Standard Namespaces
              and Content Types).
-            
+
              @author CDubettier define some constants, Julien Chable
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.ContentTypes.CORE_PROPERTIES_PART">
@@ -54,13 +54,13 @@
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.ContentTypes.IMAGE_TIFF">
              TIFF image format.
-            
+
              @see <a href="http://partners.adobe.com/public/developer/tiff/index.html#spec">
              http://partners.adobe.com/public/developer/tiff/index.html#spec</a>
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.ContentTypes.IMAGE_PICT">
              Pict image format.
-            
+
              @see <a href="http://developer.apple.com/documentation/mac/QuickDraw/QuickDraw-2.html">
              http://developer.apple.com/documentation/mac/QuickDraw/QuickDraw-2.html</a>
         </member>
@@ -69,12 +69,12 @@
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.EncryptionOption">
              Specifies the encryption option for parts in a Package.
-            
+
              @author Julien Chable
              @version 0.1
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.EncryptionOption.NONE">
-            No encryption. 
+            No encryption.
         </member>
         <!-- Badly formed XML comment ignored for member "T:NPOI.OpenXml4Net.OPC.Internal.ContentType" -->
         <member name="F:NPOI.OpenXml4Net.OPC.Internal.ContentType.type">
@@ -91,7 +91,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ContentType.#ctor(System.String)">
              Constructor. Check the input with the RFC 2616 grammar.
-            
+
              @param contentType
                         The content type to store.
              @throws InvalidFormatException
@@ -99,24 +99,24 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ContentType.GetParameters(System.String)">
              Gets the value associated to the specified key.
-            
+
              @param key
                         The key of the key/value pair.
              @return The value associated to the specified key.
         </member>
         <member name="P:NPOI.OpenXml4Net.OPC.Internal.ContentType.SubType">
              Get the subtype.
-            
+
              @return The subtype of this content type.
         </member>
         <member name="P:NPOI.OpenXml4Net.OPC.Internal.ContentType.Type">
              Get the type.
-            
+
              @return The type of this content type.
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.Internal.ContentTypeManager">
             Manage package content types ([Content_Types].xml part).
-            
+
             @author Julien Chable
             @version 1.0
         </member>
@@ -135,7 +135,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ContentTypeManager.#ctor(System.IO.Stream,NPOI.OpenXml4Net.OPC.OPCPackage)">
             Constructor. Parses the content of the specified input stream.
-            
+
             @param in
                        If different of <i>null</i> then the content types part is
                        retrieve and parse.
@@ -181,7 +181,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ContentTypeManager.AddOverrideContentType(NPOI.OpenXml4Net.OPC.PackagePartName,System.String)">
             Add an override content type for a specific part.
-            
+
             @param partName
                        Name of the part.
             @param contentType
@@ -189,7 +189,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ContentTypeManager.AddDefaultContentType(System.String,System.String)">
             Add a content type associated with the specified extension.
-            
+
             @param extension
                        The part name extension to bind to a content type.
             @param contentType
@@ -216,7 +216,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ContentTypeManager.IsContentTypeRegister(System.String)">
             Check if the specified content type is already register.
-            
+
             @param contentType
                        The content type to check.
             @return <code>true</code> if the specified content type is already
@@ -256,7 +256,7 @@
             @return The content type associated with the URI (in case of an override
                     content type) or the extension (in case of default content type),
                     else <code>null</code>.
-            
+
             @exception OpenXml4NetRuntimeException
                            Throws if the content type manager is not able to find the
                            content from an existing part.
@@ -266,18 +266,17 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ContentTypeManager.ClearOverrideContentTypes">
             Clear all override content types.
-            
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ContentTypeManager.ParseContentTypesFile(System.IO.Stream)">
             Parse the content types part.
-            
+
             @throws InvalidFormatException
                         Throws if the content type doesn't exist or the XML format is
                         invalid.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ContentTypeManager.Save(System.IO.Stream)">
             Save the contents type part.
-            
+
             @param outStream
                        The output stream use to save the XML content of the content
                        types part.
@@ -285,7 +284,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ContentTypeManager.AppendSpecificTypes(System.Xml.XmlDocument,System.Xml.XmlElement,System.Collections.Generic.KeyValuePair{NPOI.OpenXml4Net.OPC.PackagePartName,System.String})">
             Use to Append specific type XML elements, use by the save() method.
-            
+
             @param root
                        XML parent element use to Append this override type element.
             @param entry
@@ -294,7 +293,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ContentTypeManager.AppendDefaultType(System.Xml.XmlDocument,System.Xml.XmlElement,System.Collections.Generic.KeyValuePair{System.String,System.String})">
             Use to Append default types XML elements, use by the save() metid.
-            
+
             @param root
                        XML parent element use to Append this default type element.
             @param entry
@@ -304,26 +303,26 @@
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ContentTypeManager.SaveImpl(System.Xml.XmlDocument,System.IO.Stream)">
             Specific implementation of the save method. Call by the save() method,
             call before exiting.
-            
+
             @param out
                        The output stream use to write the content type XML.
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.Internal.FileHelper">
              Provide useful method to manage file.
-            
+
              @author Julien Chable
              @version 0.1
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.FileHelper.GetDirectory(System.String)">
              Get the directory part of the specified file path.
-            
+
              @param f
                         File to process.
              @return The directory path from the specified
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.FileHelper.CopyFile(System.String,System.String)">
              Copy a file.
-            
+
              @param in
                         The source file.
              @param out
@@ -336,7 +335,7 @@
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.Internal.Marshallers.DefaultMarshaller">
              Default marshaller that specified that the part is responsible to marshall its content.
-            
+
              @author Julien Chable
              @version 1.0
              @see PartMarshaller
@@ -345,13 +344,13 @@
              Object implemented this interface are considered as part marshaller. A part
              marshaller is responsible to marshall a part in order to be save in a
              package.
-            
+
              @author Julien Chable
              @version 0.1
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PartMarshaller.Marshall(NPOI.OpenXml4Net.OPC.PackagePart,System.IO.Stream)">
              Save the content of the package in the stream
-            
+
              @param part
                         Part to marshall.
              @param out
@@ -363,13 +362,13 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.Marshallers.DefaultMarshaller.Marshall(NPOI.OpenXml4Net.OPC.PackagePart,System.IO.Stream)">
              Save part in the output stream by using the save() method of the part.
-            
+
              @throws OpenXml4NetException
                          If any error occur.
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.Internal.Marshallers.PackagePropertiesMarshaller">
              Package properties marshaller.
-            
+
              @author CDubet, Julien Chable
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.Marshallers.PackagePropertiesMarshaller.Marshall(NPOI.OpenXml4Net.OPC.PackagePart,System.IO.Stream)">
@@ -408,7 +407,6 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.Marshallers.PackagePropertiesMarshaller.AddLastPrinted">
              Add 'last printed' property if needed.
-            
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.Marshallers.PackagePropertiesMarshaller.AddModified">
             Add modified property element if needed.
@@ -424,23 +422,23 @@
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.Internal.Marshallers.ZipPackagePropertiesMarshaller">
              Package core properties marshaller specialized for zipped package.
-            
+
              @author Julien Chable
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.Internal.Marshallers.ZipPartMarshaller">
              Zip part marshaller. This marshaller is use to save any part in a zip stream.
-            
+
              @author Julien Chable
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.Marshallers.ZipPartMarshaller.Marshall(NPOI.OpenXml4Net.OPC.PackagePart,System.IO.Stream)">
              Save the specified part.
-            
+
              @throws OpenXml4NetException
                          Throws if an internal exception is thrown.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.Marshallers.ZipPartMarshaller.MarshallRelationshipPart(NPOI.OpenXml4Net.OPC.PackageRelationshipCollection,NPOI.OpenXml4Net.OPC.PackagePartName,ICSharpCode.SharpZipLib.Zip.ZipOutputStream)">
              Save relationships into the part.
-            
+
              @param rels
                         The relationships collection to marshall.
              @param relPartName
@@ -451,13 +449,13 @@
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.PackagePart">
             Provides a base class for parts stored in a Package.
-            
+
             @author Julien Chable
             @version 0.9
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.RelationshipSource.AddRelationship(NPOI.OpenXml4Net.OPC.PackagePartName,NPOI.OpenXml4Net.OPC.TargetMode,System.String)">
             Add a relationship to a part (except relationships part).
-            
+
             @param targetPartName
                        Name of the target part. This one must be relative to the
                        source root directory of the part.
@@ -469,12 +467,12 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.RelationshipSource.AddRelationship(NPOI.OpenXml4Net.OPC.PackagePartName,NPOI.OpenXml4Net.OPC.TargetMode,System.String,System.String)">
                      * Add a relationship to a part (except relationships part).
-                     
+
                      * Check rule M1.25: The Relationships part shall not have relationships to
                      * any other part. Package implementers shall enforce this requirement upon
                      * the attempt to create such a relationship and shall treat any such
                      * relationship as invalid.
-                     * 
+                     *
                      * @param targetPartName
                      *            Name of the target part. This one must be relative to the
                      *            source root directory of the part.
@@ -485,19 +483,19 @@
                      * @param id
                      *            Relationship unique id.
                      * @return The newly created and added relationship
-                     * 
+                     *
                      * @throws InvalidFormatException
                      *             If the URI point to a relationship part URI.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.RelationshipSource.AddExternalRelationship(System.String,System.String)">
             Adds an external relationship to a part
              (except relationships part).
-            
+
             The targets of external relationships are not
              subject to the same validity checks that internal
              ones are, as the contents is potentially
              any file, URL or similar.
-             
+
             @param target External target of the relationship
             @param relationshipType Type of relationship.
             @return The newly created and added relationship
@@ -506,12 +504,12 @@
         <member name="M:NPOI.OpenXml4Net.OPC.RelationshipSource.AddExternalRelationship(System.String,System.String,System.String)">
             Adds an external relationship to a part
              (except relationships part).
-            
+
             The targets of external relationships are not
              subject to the same validity checks that internal
              ones are, as the contents is potentially
              any file, URL or similar.
-             
+
             @param target External target of the relationship
             @param relationshipType Type of relationship.
             @param id Relationship unique id.
@@ -523,13 +521,13 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.RelationshipSource.RemoveRelationship(System.String)">
             Delete the relationship specified by its id.
-            
+
             @param id
                        The ID identified the part to delete.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.RelationshipSource.GetRelationship(System.String)">
             Retrieves a package relationship from its id.
-            
+
             @param id
                        ID of the package relationship to retrieve.
             @return The package relationship
@@ -537,7 +535,7 @@
         <member name="M:NPOI.OpenXml4Net.OPC.RelationshipSource.GetRelationshipsByType(System.String)">
             Retrieve all relationships attached to this part which have the specified
             type.
-            
+
             @param relationshipType
                        Relationship type filter.
             @return All relationships from this part that have the specified type.
@@ -548,7 +546,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.RelationshipSource.IsRelationshipExists(NPOI.OpenXml4Net.OPC.PackageRelationship)">
             Checks if the specified relationship is part of this package part.
-            
+
             @param rel
                        The relationship to check.
             @return <b>true</b> if the specified relationship exists in this part,
@@ -556,13 +554,13 @@
         </member>
         <member name="P:NPOI.OpenXml4Net.OPC.RelationshipSource.Relationships">
             Retrieve all the relationships attached to this.
-            
+
             @return This part's relationships.
             @throws OpenXml4NetException
         </member>
         <member name="P:NPOI.OpenXml4Net.OPC.RelationshipSource.HasRelationships">
             Knows if the part have any relationships.
-            
+
             @return <b>true</b> if the part have at least one relationship else
                     <b>false</b>.
         </member>
@@ -586,7 +584,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.#ctor(NPOI.OpenXml4Net.OPC.OPCPackage,NPOI.OpenXml4Net.OPC.PackagePartName,NPOI.OpenXml4Net.OPC.Internal.ContentType)">
             Constructor.
-            
+
             @param pack
                        Parent package.
             @param partName
@@ -598,7 +596,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.#ctor(NPOI.OpenXml4Net.OPC.OPCPackage,NPOI.OpenXml4Net.OPC.PackagePartName,NPOI.OpenXml4Net.OPC.Internal.ContentType,System.Boolean)">
             Constructor.
-            
+
             @param pack
                        Parent package.
             @param partName
@@ -612,7 +610,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.#ctor(NPOI.OpenXml4Net.OPC.OPCPackage,NPOI.OpenXml4Net.OPC.PackagePartName,System.String)">
             Constructor.
-            
+
             @param pack
                        Parent package.
             @param partName
@@ -623,11 +621,11 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.AddExternalRelationship(System.String,System.String)">
             Adds an external relationship to a part (except relationships part).
-            
+
             The targets of external relationships are not subject to the same
             validity checks that internal ones are, as the contents is potentially
             any file, URL or similar.
-            
+
             @param target
                        External target of the relationship
             @param relationshipType
@@ -638,11 +636,11 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.AddExternalRelationship(System.String,System.String,System.String)">
             Adds an external relationship to a part (except relationships part).
-            
+
             The targets of external relationships are not subject to the same
             validity checks that internal ones are, as the contents is potentially
             any file, URL or similar.
-            
+
             @param target
                        External target of the relationship
             @param relationshipType
@@ -655,7 +653,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.AddRelationship(NPOI.OpenXml4Net.OPC.PackagePartName,NPOI.OpenXml4Net.OPC.TargetMode,System.String)">
             Add a relationship to a part (except relationships part).
-            
+
             @param targetPartName
                        Name of the target part. This one must be relative to the
                        source root directory of the part.
@@ -685,7 +683,7 @@
             @param id
                        Relationship unique id.
             @return The newly created and added relationship
-            
+
             @throws InvalidFormatException
                         If the URI point to a relationship part URI.
             @see org.apache.poi.OpenXml4Net.opc.RelationshipSource#AddRelationship(org.apache.poi.OpenXml4Net.opc.PackagePartName,
@@ -693,7 +691,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.AddRelationship(System.Uri,NPOI.OpenXml4Net.OPC.TargetMode,System.String)">
             Add a relationship to a part (except relationships part).
-            
+
             @param targetURI
                        URI the target part. Must be relative to the source root
                        directory of the part.
@@ -723,7 +721,7 @@
             @param id
                        Relationship unique id.
             @return The newly created and added relationship
-            
+
             @throws InvalidFormatException
                         If the URI point to a relationship part URI.
             @see org.apache.poi.OpenXml4Net.opc.RelationshipSource#AddRelationship(org.apache.poi.OpenXml4Net.opc.PackagePartName,
@@ -734,14 +732,14 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.RemoveRelationship(System.String)">
             Delete the relationship specified by its id.
-            
+
             @param id
                        The ID identified the part to delete.
             @see org.apache.poi.OpenXml4Net.opc.RelationshipSource#removeRelationship(java.lang.String)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.GetRelationship(System.String)">
             Retrieves a package relationship from its id.
-            
+
             @param id
                        ID of the package relationship to retrieve.
             @return The package relationship
@@ -750,7 +748,7 @@
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.GetRelationshipsByType(System.String)">
             Retrieve all relationships attached to this part which have the specified
             type.
-            
+
             @param relationshipType
                        Relationship type filter.
             @return All relationships from this part that have the specified type.
@@ -762,7 +760,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.GetRelationshipsCore(System.String)">
             Implementation of the getRelationships method().
-            
+
             @param filter
                        Relationship type filter. If <i>null</i> then the filter is
                        disabled and return all the relationships.
@@ -776,7 +774,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.IsRelationshipExists(NPOI.OpenXml4Net.OPC.PackageRelationship)">
             Checks if the specified relationship is part of this package part.
-            
+
             @param rel
                        The relationship to check.
             @return <b>true</b> if the specified relationship exists in this part,
@@ -785,13 +783,13 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.GetRelatedPart(NPOI.OpenXml4Net.OPC.PackageRelationship)">
              Get the PackagePart that is the target of a relationship.
-            
-             @param rel A relationship from this part to another one 
+
+             @param rel A relationship from this part to another one
              @return The target part of the relationship
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.GetInputStream">
             Get the input stream of this part to read its content.
-            
+
             @return The input stream of the content of this part, else
                     <code>null</code>.
         </member>
@@ -800,24 +798,24 @@
              Zip package, it'll be transform intot a <i>MemoryPackagePart</i> in
              order to write inside (the standard Java API doesn't allow to write in
              the file)
-            
+
              @see org.apache.poi.openxml4j.opc.internal.MemoryPackagePart
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.ThrowExceptionIfRelationship">
             Throws an exception if this package part is a relationship part.
-            
+
             @throws InvalidOperationException
                         If this part is a relationship part.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.LoadRelationships">
             Ensure the package relationships collection instance is built.
-            
+
             @throws InvalidFormatException
                         Throws if
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.GetInputStreamImpl">
             Abtract method that get the input stream of this part.
-            
+
             @exception IOException
                            Throws if an IO Exception occur in the implementation
                            method.
@@ -829,7 +827,7 @@
             Save the content of this part and the associated relationships part (if
             this part own at least one relationship) into the specified output
             stream.
-            
+
             @param zos
                        Output stream to save this part.
             @throws OpenXml4NetException
@@ -837,7 +835,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePart.Load(System.IO.Stream)">
             Load the content of this part.
-            
+
             @param ios
                        The input stream of the content to load.
             @return <b>true</b> if the content has been successfully loaded, else
@@ -856,14 +854,14 @@
         </member>
         <member name="P:NPOI.OpenXml4Net.OPC.PackagePart.Relationships">
             Retrieve all the relationships attached to this part.
-            
+
             @return This part's relationships.
             @throws OpenXml4NetException
             @see org.apache.poi.OpenXml4Net.opc.RelationshipSource#getRelationships()
         </member>
         <member name="P:NPOI.OpenXml4Net.OPC.PackagePart.HasRelationships">
             Knows if the part have any relationships.
-            
+
             @return <b>true</b> if the part have at least one relationship else
                     <b>false</b>.
             @see org.apache.poi.OpenXml4Net.opc.RelationshipSource#hasRelationships()
@@ -885,7 +883,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.MemoryPackagePart.#ctor(NPOI.OpenXml4Net.OPC.OPCPackage,NPOI.OpenXml4Net.OPC.PackagePartName,System.String)">
             Constructor.
-            
+
             @param pack
                        The owner package.
             @param partName
@@ -897,7 +895,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.MemoryPackagePart.#ctor(NPOI.OpenXml4Net.OPC.OPCPackage,NPOI.OpenXml4Net.OPC.PackagePartName,System.String,System.Boolean)">
             Constructor.
-            
+
             @param pack
                        The owner package.
             @param partName
@@ -920,13 +918,13 @@
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart">
             Represents the core properties part of a package.
-            
+
             @author Julien Chable
             @version 1.0
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.PackageProperties">
             Represents the core properties of an OPC package.
-            
+
             @author Julien Chable
             @version 1.0
             @see org.apache.poi.OpenXml4Net.opc.OPCPackage
@@ -1046,7 +1044,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.#ctor(NPOI.OpenXml4Net.OPC.OPCPackage,NPOI.OpenXml4Net.OPC.PackagePartName)">
             Constructor.
-            
+
             @param pack
                        Container package.
             @param partName
@@ -1056,7 +1054,7 @@
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.category">
             A categorization of the content of this package.
-            
+
             [Example: Example values for this property might include: Resume, Letter,
             Financial Forecast, Proposal, Technical Presentation, and so on. This
             value might be used by an application's user interface to facilitate
@@ -1064,14 +1062,14 @@
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.contentStatus">
             The status of the content.
-            
+
             [Example: Values might include "Draft", "Reviewed", and "Final". end
             example]
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.contentType">
             The type of content represented, generally defined by a specific use and
             intended audience.
-            
+
             [Example: Values might include "Whitepaper", "Security Bulletin", and
             "Exam". end example] [Note: This property is distinct from MIME content
             types as defined in RFC 2616. end note]
@@ -1084,7 +1082,7 @@
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.description">
             An explanation of the content of the resource.
-            
+
             [Example: Values might include an abstract, table of contents, reference
             to a graphical representation of content, and a free-text account of the
             content. end example]
@@ -1099,14 +1097,14 @@
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.language">
             The language of the intellectual content of the resource.
-            
+
             [Note: IETF RFC 3066 provides guidance on encoding to represent
             languages. end note]
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.lastModifiedBy">
             The user who performed the last modification. The identification is
             environment-specific.
-            
+
             [Example: A name, email address, or employee ID. end example] It is
             recommended that this value be as concise as possible.
         </member>
@@ -1118,7 +1116,7 @@
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.revision">
             The revision number.
-            
+
             [Example: This value might indicate the number of saves or revisions,
             provided the application updates it after each revision. end example]
         </member>
@@ -1133,192 +1131,192 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetCategoryProperty">
             Get the category property.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#getCategoryProperty()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetContentStatusProperty">
             Get content status.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#getContentStatusProperty()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetContentTypeProperty">
             Get content type.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#getContentTypeProperty()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetCreatedProperty">
             Get created date.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#getCreatedProperty()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetCreatedPropertyString">
             Get created date formated into a String.
-            
+
             @return A string representation of the created date.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetCreatorProperty">
             Get creator.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#getCreatorProperty()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetDescriptionProperty">
             Get description.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#getDescriptionProperty()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetIdentifierProperty">
             Get identifier.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#getIdentifierProperty()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetKeywordsProperty">
             Get keywords.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#getKeywordsProperty()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetLanguageProperty">
             Get the language.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#getLanguageProperty()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetLastModifiedByProperty">
             Get the author of last modifications.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#getLastModifiedByProperty()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetLastPrintedProperty">
             Get last printed date.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#getLastPrintedProperty()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetLastPrintedPropertyString">
             Get last printed date formated into a String.
-            
+
             @return A string representation of the last printed date.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetModifiedProperty">
             Get modified date.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#getModifiedProperty()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetModifiedPropertyString">
             Get modified date formated into a String.
-            
+
             @return A string representation of the modified date.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetRevisionProperty">
             Get revision.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#getRevisionProperty()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetSubjectProperty">
             Get subject.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#getSubjectProperty()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetTitleProperty">
             Get title.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#getTitleProperty()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.GetVersionProperty">
             Get version.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#getVersionProperty()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetCategoryProperty(System.String)">
             Set the category.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setCategoryProperty(java.lang.String)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetContentStatusProperty(System.String)">
             Set the content status.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setContentStatusProperty(java.lang.String)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetContentTypeProperty(System.String)">
             Set the content type.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setContentTypeProperty(java.lang.String)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetCreatedProperty(System.String)">
             Set the created date.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setCreatedProperty(org.apache.poi.OpenXml4Net.util.Nullable)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetCreatedProperty(System.Nullable{System.DateTime})">
             Set the created date.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setCreatedProperty(org.apache.poi.OpenXml4Net.util.Nullable)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetCreatorProperty(System.String)">
             Set the creator.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setCreatorProperty(java.lang.String)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetDescriptionProperty(System.String)">
             Set the description.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setDescriptionProperty(java.lang.String)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetIdentifierProperty(System.String)">
             Set identifier.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setIdentifierProperty(java.lang.String)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetKeywordsProperty(System.String)">
             Set keywords.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setKeywordsProperty(java.lang.String)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetLanguageProperty(System.String)">
             Set language.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setLanguageProperty(java.lang.String)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetLastModifiedByProperty(System.String)">
             Set last modifications author.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setLastModifiedByProperty(java.lang.String)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetLastPrintedProperty(System.String)">
             Set last printed date.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setLastPrintedProperty(org.apache.poi.OpenXml4Net.util.Nullable)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetLastPrintedProperty(System.Nullable{System.DateTime})">
             Set last printed date.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setLastPrintedProperty(org.apache.poi.OpenXml4Net.util.Nullable)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetModifiedProperty(System.String)">
             Set last modification date.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setModifiedProperty(org.apache.poi.OpenXml4Net.util.Nullable)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetModifiedProperty(System.Nullable{System.DateTime})">
             Set last modification date.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setModifiedProperty(org.apache.poi.OpenXml4Net.util.Nullable)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetRevisionProperty(System.String)">
             Set revision.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setRevisionProperty(java.lang.String)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetSubjectProperty(System.String)">
             Set subject.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setSubjectProperty(java.lang.String)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetTitleProperty(System.String)">
             Set title.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setTitleProperty(java.lang.String)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetVersionProperty(System.String)">
             Set version.
-            
+
             @see org.apache.poi.OpenXml4Net.opc.PackageProperties#setVersionProperty(java.lang.String)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PackagePropertiesPart.SetStringValue(System.String)">
@@ -1330,13 +1328,13 @@
              Object implemented this interface are considered as part unmarshaller. A part
              unmarshaller is responsible to unmarshall a part in order to load it from a
              package.
-            
+
              @author Julien Chable
              @version 0.1
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.PartUnmarshaller.Unmarshall(NPOI.OpenXml4Net.OPC.Internal.Unmarshallers.UnmarshallContext,System.IO.Stream)">
              Save the content of the package in the stream
-            
+
              @param in
                         The input stream from which the part will be unmarshall.
              @return The part freshly unmarshall from the input stream.
@@ -1346,20 +1344,20 @@
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.Internal.Unmarshallers.PackagePropertiesUnmarshaller">
              Package properties unmarshaller.
-            
+
              @author Julien Chable
              @version 1.0
         </member>
         <!-- Badly formed XML comment ignored for member "M:NPOI.OpenXml4Net.OPC.Internal.Unmarshallers.PackagePropertiesUnmarshaller.CheckElementForOPCCompliance(System.Xml.XmlElement)" -->
         <member name="T:NPOI.OpenXml4Net.OPC.Internal.Unmarshallers.UnmarshallContext">
             Context needed for the unmarshall process of a part. This class is immutable.
-            
+
             @author Julien Chable
             @version 1.0
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.Unmarshallers.UnmarshallContext.#ctor(NPOI.OpenXml4Net.OPC.OPCPackage,NPOI.OpenXml4Net.OPC.PackagePartName)">
             Constructor.
-            
+
             @param targetPackage
                        Container.
             @param partName
@@ -1376,14 +1374,14 @@
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.Internal.ZipContentTypeManager">
             Zip implementation of the ContentTypeManager.
-            
+
             @author Julien Chable
             @version 1.0
             @see ContentTypeManager
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ZipContentTypeManager.#ctor(System.IO.Stream,NPOI.OpenXml4Net.OPC.OPCPackage)">
             Delegate constructor to the super constructor.
-            
+
             @param in
                        The input stream to parse to fill internal content type
                        collections.
@@ -1404,7 +1402,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ZipHelper.GetCorePropertiesZipEntry(NPOI.OpenXml4Net.OPC.ZipPackage)">
              Retrieve the zip entry of the core properties part.
-            
+
              @throws OpenXml4NetException
                          Throws if internal error occurs.
         </member>
@@ -1414,7 +1412,7 @@
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ZipHelper.GetOPCNameFromZipItemName(System.String)">
              Convert a zip name into an OPC name by adding a leading forward slash to
              the specified item name.
-            
+
              @param zipItemName
                         Zip item name to convert.
              @return An OPC compliant name.
@@ -1422,7 +1420,7 @@
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ZipHelper.GetZipItemNameFromOPCName(System.String)">
              Convert an OPC item name into a zip item name by removing any leading
              forward slash if it exist.
-            
+
              @param opcItemName
                         The OPC item name to convert.
              @return A zip item name without any leading slashes.
@@ -1430,28 +1428,28 @@
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ZipHelper.GetZipURIFromOPCName(System.String)">
              Convert an OPC item name into a zip URI by removing any leading forward
              slash if it exist.
-            
+
              @param opcItemName
                         The OPC item name to convert.
              @return A zip URI without any leading slashes.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ZipHelper.OpenZipFile(System.IO.FileInfo)">
              Opens the specified file as a zip, or returns null if no such file exists
-            
+
              @param file
                         The file to open.
              @return The zip archive freshly open.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.Internal.ZipHelper.OpenZipFile(System.String)">
              Retrieve and open a zip file with the specified path.
-            
+
              @param path
                         The file path.
              @return The zip archive freshly open.
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.OPCPackage">
             Represents a container that can store multiple data objects.
-            
+
             @author Julien Chable, CDubet
             @version 0.1
         </member>
@@ -1496,7 +1494,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.#ctor(NPOI.OpenXml4Net.OPC.PackageAccess)">
             Constructor.
-            
+
             @param access
                        Package access.
         </member>
@@ -1505,7 +1503,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.Open(System.String)">
             Open a package with read/write permission.
-            
+
             @param path
                        The document path.
             @return A Package object, else <b>null</b>.
@@ -1515,7 +1513,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.Open(System.IO.FileInfo)">
              Open a package with read/write permission.
-            
+
              @param file
                         The file to open.
              @return A Package object, else <b>null</b>.
@@ -1525,7 +1523,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.Open(System.String,NPOI.OpenXml4Net.OPC.PackageAccess)">
             Open a package.
-            
+
             @param path
                        The document path.
             @param access
@@ -1537,7 +1535,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.Open(System.IO.FileInfo,NPOI.OpenXml4Net.OPC.PackageAccess)">
              Open a package.
-            
+
              @param file
                         The file to open.
              @param access
@@ -1549,18 +1547,18 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.Open(System.IO.Stream)">
             Open a package.
-            
+
             Note - uses quite a bit more memory than {@link #open(String)}, which
             doesn't need to hold the whole zip file in memory, and can take advantage
             of native methods
-            
+
             @param in
                        The InputStream to read the package from
             @return A PackageBase object
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.OpenOrCreate(System.String)">
             Opens a package if it exists, else it Creates one.
-            
+
             @param file
                        The file to open or to Create.
             @return A newly Created package if the specified file does not exist,
@@ -1570,24 +1568,24 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.Create(System.String)">
             Creates a new package.
-            
+
             @param file
                        Path of the document.
             @return A newly Created PackageBase ready to use.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.ConfigurePackage(NPOI.OpenXml4Net.OPC.OPCPackage)">
             Configure the package.
-            
+
             @param pkg
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.Flush">
             Flush the package : save all.
-            
+
             @see #close()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.Close">
             Close the package and save its content.
-            
+
             @throws IOException
                         If an IO exception occur during the saving process.
         </member>
@@ -1599,14 +1597,14 @@
             Add a thumbnail to the package. This method is provided to make easier
             the addition of a thumbnail in a package. You can do the same work by
             using the traditionnal relationship and part mechanism.
-            
+
             @param path
                        The full path to the image file.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.ThrowExceptionIfReadOnly">
             Throws an exception if the package access mode is in read only mode
             (PackageAccess.Read).
-            
+
             @throws InvalidOperationException
                         Throws if a writing operation is done on a read only package.
             @see org.apache.poi.OpenXml4Net.opc.PackageAccess
@@ -1615,33 +1613,33 @@
             Throws an exception if the package access mode is in write only mode
             (PackageAccess.Write). This method is call when other methods need write
             right.
-            
+
             @throws InvalidOperationException
                         Throws if a read operation is done on a write only package.
             @see org.apache.poi.OpenXml4Net.opc.PackageAccess
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.GetPackageProperties">
             Retrieves or Creates if none exists, core package property part.
-            
+
             @return The PackageProperties part of this package.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.GetPart(NPOI.OpenXml4Net.OPC.PackagePartName)">
             Retrieve a part identified by its name.
-            
+
             @param PartName
                        Part name of the part to retrieve.
             @return The part with the specified name, else <code>null</code>.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.GetPartsByContentType(System.String)">
             Retrieve parts by content type.
-            
+
             @param contentType
                        The content type criteria.
             @return All part associated to the specified content type.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.GetPartsByRelationshipType(System.String)">
             Retrieve parts by relationship type.
-            
+
             @param relationshipType
                        Relationship type.
             @return All parts which are the target of a relationship with the
@@ -1650,7 +1648,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.GetPart(NPOI.OpenXml4Net.OPC.PackageRelationship)">
             Get the target part from the specified relationship.
-            
+
             @param partRel
                        The part relationship uses to retrieve the part.
         </member>
@@ -1660,13 +1658,13 @@
             Note - Rule M4.1 states that there may only ever be one Core
              Properties Part, but Office produced files will sometimes
              have multiple! As Office ignores all but the first, we relax
-             Compliance with Rule M4.1, and ignore all others silently too. 
+             Compliance with Rule M4.1, and ignore all others silently too.
             @return All this package's parts.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.CreatePart(NPOI.OpenXml4Net.OPC.PackagePartName,System.String)">
             Create and Add a part, with the specified name and content type, to the
             package.
-            
+
             @param PartName
                        Part name.
             @param contentType
@@ -1676,13 +1674,13 @@
                         If rule M1.12 is not verified : Packages shall not contain
                         equivalent part names and package implementers shall neither
                         Create nor recognize packages with equivalent part names.
-            @see #CreatePartImpl(PackagePartName, String, bool) 
+            @see #CreatePartImpl(PackagePartName, String, bool)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.CreatePart(NPOI.OpenXml4Net.OPC.PackagePartName,System.String,System.Boolean)">
             Create and Add a part, with the specified name and content type, to the
             package. For general purpose, prefer the overload version of this method
             without the 'loadRelationships' parameter.
-            
+
             @param PartName
                        Part name.
             @param contentType
@@ -1699,7 +1697,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.CreatePart(NPOI.OpenXml4Net.OPC.PackagePartName,System.String,System.IO.MemoryStream)">
             Add a part to the package.
-            
+
             @param PartName
                        Part name of the part to Create.
             @param contentType
@@ -1708,7 +1706,7 @@
                        the contents to Add. In order to have faster operation in
                        document merge, the data are stored in memory not on a hard
                        disk
-            
+
             @return The new part.
             @see #CreatePart(PackagePartName, String)
         </member>
@@ -1716,7 +1714,7 @@
             Add the specified part to the package. If a part already exists in the
             package with the same name as the one specified, then we replace the old
             part by the specified part.
-            
+
             @param part
                        The part to Add (or replace).
             @return The part Added to the package, the same as the one specified.
@@ -1728,7 +1726,7 @@
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.RemovePart(NPOI.OpenXml4Net.OPC.PackagePart)">
             Remove the specified part in this package. If this part is relationship
             part, then delete all relationships in the source part.
-            
+
             @param part
                        The part to Remove. If <code>null</code>, skip the action.
             @see #RemovePart(PackagePartName)
@@ -1736,7 +1734,7 @@
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.RemovePart(NPOI.OpenXml4Net.OPC.PackagePartName)">
             Remove a part in this package. If this part is relationship part, then
             delete all relationships in the source part.
-            
+
             @param PartName
                        The part name of the part to Remove.
         </member>
@@ -1744,7 +1742,7 @@
             Remove a part from this package as well as its relationship part, if one
             exists, and all parts listed in the relationship part. Be aware that this
             do not delete relationships which target the specified part.
-            
+
             @param PartName
                        The name of the part to delete.
             @throws InvalidFormatException
@@ -1756,7 +1754,7 @@
             part if one exists. Prefer the use of this method to delete a part in the
             package, compare to the Remove() methods that don't Remove associated
             relationships part.
-            
+
             @param PartName
                        Name of the part to delete
         </member>
@@ -1766,13 +1764,13 @@
             apply to all parts in the relationships part of the specified part.
             Prefer the use of this method to delete a part in the package, compare to
             the Remove() methods that don't Remove associated relationships part.
-            
+
             @param PartName
                        Name of the part to delete
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.ContainPart(NPOI.OpenXml4Net.OPC.PackagePartName)">
             Check if a part already exists in this package from its name.
-            
+
             @param PartName
                        Part name to check.
             @return <i>true</i> if the part is logically Added to this package, else
@@ -1780,18 +1778,18 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.AddRelationship(NPOI.OpenXml4Net.OPC.PackagePartName,NPOI.OpenXml4Net.OPC.TargetMode,System.String,System.String)">
             Add a relationship to the package (except relationships part).
-            
+
             Check rule M4.1 : The format designer shall specify and the format
             producer shall Create at most one core properties relationship for a
             package. A format consumer shall consider more than one core properties
             relationship for a package to be an error. If present, the relationship
             shall target the Core Properties part.
-            
+
             Check rule M1.25: The Relationships part shall not have relationships to
             any other part. Package implementers shall enforce this requirement upon
             the attempt to Create such a relationship and shall treat any such
             relationship as invalid.
-            
+
             @param targetPartName
                        Target part name.
             @param targetMode
@@ -1804,7 +1802,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.AddRelationship(NPOI.OpenXml4Net.OPC.PackagePartName,NPOI.OpenXml4Net.OPC.TargetMode,System.String)">
             Add a package relationship.
-            
+
             @param targetPartName
                        Target part name.
             @param targetMode
@@ -1815,11 +1813,11 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.AddExternalRelationship(System.String,System.String)">
             Adds an external relationship to a part (except relationships part).
-            
+
             The targets of external relationships are not subject to the same
             validity checks that internal ones are, as the contents is potentially
             any file, URL or similar.
-            
+
             @param target
                        External target of the relationship
             @param relationshipType
@@ -1830,11 +1828,11 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.AddExternalRelationship(System.String,System.String,System.String)">
             Adds an external relationship to a part (except relationships part).
-            
+
             The targets of external relationships are not subject to the same
             validity checks that internal ones are, as the contents is potentially
             any file, URL or similar.
-            
+
             @param target
                        External target of the relationship
             @param relationshipType
@@ -1847,13 +1845,13 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.RemoveRelationship(System.String)">
             Delete a relationship from this package.
-            
+
             @param id
                        Id of the relationship to delete.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.GetRelationshipsByType(System.String)">
             Retrieves all relationships with the specified type.
-            
+
             @param relationshipType
                        The filter specifying the relationship type.
             @return All relationships with the specified relationship type.
@@ -1861,7 +1859,7 @@
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.GetRelationshipsHelper(System.String)">
             Retrieves all relationships with specified id (normally just ine because
             a relationship id is supposed to be unique).
-            
+
             @param id
                        Id of the wanted relationship.
         </member>
@@ -1879,7 +1877,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.AddMarshaller(System.String,NPOI.OpenXml4Net.OPC.Internal.PartMarshaller)">
             Add a marshaller.
-            
+
             @param contentType
                        The content type to bind to the specified marshaller.
             @param marshaller
@@ -1887,7 +1885,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.AddUnmarshaller(System.String,NPOI.OpenXml4Net.OPC.Internal.PartUnmarshaller)">
             Add an unmarshaller.
-            
+
             @param contentType
                        The content type to bind to the specified unmarshaller.
             @param unmarshaller
@@ -1895,29 +1893,29 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.RemoveMarshaller(System.String)">
             Remove a marshaller by its content type.
-            
+
             @param contentType
                        The content type associated with the marshaller to Remove.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.RemoveUnmarshaller(System.String)">
             Remove an unmarshaller by its content type.
-            
+
             @param contentType
                        The content type associated with the unmarshaller to Remove.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.GetPackageAccess">
             Get the package access mode.
-            
+
             @return the packageAccess The current package access.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.ValidatePackage(NPOI.OpenXml4Net.OPC.OPCPackage)">
             Validates the package compliance with the OPC specifications.
-            
+
             @return <b>true</b> if the package is valid else <b>false</b>
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.Save(System.String)">
             Save the document in the specified file.
-            
+
             @param targetFile
                        Destination file.
             @throws IOException
@@ -1926,7 +1924,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.Save(System.IO.Stream)">
             Save the document in the specified output stream.
-            
+
             @param outputStream
                        The stream to save the package.
             @see #saveImpl(OutputStream)
@@ -1934,7 +1932,7 @@
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.CreatePartImpl(NPOI.OpenXml4Net.OPC.PackagePartName,System.String,System.Boolean)">
             Core method to Create a package part. This method must be implemented by
             the subclass.
-            
+
             @param PartName
                        URI of the part to Create.
             @param contentType
@@ -1944,7 +1942,7 @@
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.RemovePartImpl(NPOI.OpenXml4Net.OPC.PackagePartName)">
             Core method to delete a package part. This method must be implemented by
             the subclass.
-            
+
             @param PartName
                        The URI of the part to delete.
         </member>
@@ -1953,7 +1951,6 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.CloseImpl">
             Close the package and cause a save of the package.
-            
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.RevertImpl">
             Close the package without saving the document. Discard all changes made
@@ -1961,25 +1958,25 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.SaveImpl(System.IO.Stream)">
             Save the package into the specified output stream.
-            
+
             @param outputStream
                        The output stream use to save this package.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.GetPartImpl(NPOI.OpenXml4Net.OPC.PackagePartName)">
             Get the package part mapped to the specified URI.
-            
+
             @param PartName
                        The URI of the part to retrieve.
             @return The package part located by the specified URI, else <b>null</b>.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.GetPartsImpl">
             Get all parts link to the package.
-            
+
             @return A list of the part owned by the package.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.OPCPackage.ReplaceContentType(System.String,System.String)">
              Replace a content type in this package.
-            
+
              <p>
                  A typical scneario to call this method is to rename a template file to the main format, e.g.
                  ".dotx" to ".docx"
@@ -1992,19 +1989,18 @@
              For example, a code converting  a .xlsm macro workbook to .xlsx would look as follows:
              <p>
                 <pre><code>
-            
+
                  OPCPackage pkg = OPCPackage.open(new FileInputStream("macro-workbook.xlsm"));
                  pkg.replaceContentType(
                      "application/vnd.ms-excel.sheet.macroEnabled.main+xml",
                      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml");
-            
+
                  FileOutputStream out = new FileOutputStream("workbook.xlsx");
                  pkg.save(out);
                  out.close();
-            
                 </code></pre>
              </p>
-            
+
              @param oldContentType  the content type to be replaced
              @param newContentType  the replacement
              @return whether replacement was succesfull
@@ -2012,7 +2008,7 @@
         </member>
         <member name="P:NPOI.OpenXml4Net.OPC.OPCPackage.Relationships">
             Retrieves all package relationships.
-            
+
             @return All package relationships of this package.
             @throws OpenXml4NetException
             @see #GetRelationshipsHelper(String)
@@ -2022,22 +2018,22 @@
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.PackageAccess">
              Specifies package access.
-            
+
              @author Julien Chable
              @version 1.0
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.PackageAccess.READ">
-            Read only. Write not authorized. 
+            Read only. Write not authorized.
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.PackageAccess.WRITE">
-            Write only. Read not authorized. 
+            Write only. Read not authorized.
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.PackageAccess.READ_WRITE">
-            Read and Write mode. 
+            Read and Write mode.
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.PackageNamespaces">
              Open Packaging Convention namespaces URI.
-            
+
              @author Julien Chable
              @version 1.0
         </member>
@@ -2058,7 +2054,7 @@
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.PackagePartCollection">
              A package part collection.
-            
+
              @author Julien Chable
              @version 0.1
         </member>
@@ -2070,16 +2066,16 @@
              Check rule [M1.11]: a package implementer shall neither create nor
              recognize a part with a part name derived from another part name by
              Appending segments to it.
-            
+
              @exception InvalidOperationException
                             Throws if you try to add a part with a name derived from
                             another part name.
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.PackagePartName">
              An immutable Open Packaging Convention compliant part name.
-            
+
              @author Julien Chable
-            
+
              @see <a href="http://www.ietf.org/rfc/rfc3986.txt">http://www.ietf.org/rfc/rfc3986.txt</a>
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.PackagePartName.partNameURI">
@@ -2097,7 +2093,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePartName.#ctor(System.Uri,System.Boolean)">
              Constructor. Makes a ValidPartName object from a java.net.URI
-            
+
              @param uri
                         The URI to validate and to transform into ValidPartName.
              @param checkConformance
@@ -2112,7 +2108,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePartName.#ctor(System.String,System.Boolean)">
              Constructor. Makes a ValidPartName object from a String part name.
-            
+
              @param partName
                         Part name to valid and to create.
              @param checkConformance
@@ -2126,7 +2122,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePartName.IsRelationshipPartURI(System.Uri)">
              Check if the specified part name is a relationship part name.
-            
+
              @param partUri
                         The URI to check.
              @return <code>true</code> if this part name respect the relationship
@@ -2134,14 +2130,14 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePartName.IsRelationshipPartURI">
              Know if this part name is a relationship part name.
-            
+
              @return <code>true</code> if this part name respect the relationship
                      part naming convention else <code>false</code>.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePartName.ThrowExceptionIfInvalidPartUri(System.Uri)">
              Throws an exception (of any kind) if the specified part name does not
              follow the Open Packaging Convention specifications naming rules.
-            
+
              @param partUri
                         The part name to check.
              @throws Exception
@@ -2149,7 +2145,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePartName.ThrowExceptionIfEmptyURI(System.Uri)">
              Throws an exception if the specified URI is empty. [M1.1]
-            
+
              @param partURI
                         Part URI to check.
              @throws InvalidFormatException
@@ -2157,22 +2153,22 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePartName.ThrowExceptionIfPartNameHaveInvalidSegments(System.Uri)">
              Throws an exception if the part name has empty segments. [M1.3]
-            
+
              Throws an exception if a segment any characters other than pchar
              characters. [M1.6]
-            
+
              Throws an exception if a segment contain percent-encoded forward slash
              ('/'), or backward slash ('\') characters. [M1.7]
-            
+
              Throws an exception if a segment contain percent-encoded unreserved
              characters. [M1.8]
-            
+
              Throws an exception if the specified part name's segments end with a dot
              ('.') character. [M1.9]
-            
+
              Throws an exception if a segment doesn't include at least one non-dot
              character. [M1.10]
-            
+
              @param partUri
                         The part name to check.
              @throws InvalidFormatException
@@ -2183,20 +2179,20 @@
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePartName.CheckPCharCompliance(System.String)">
              Throws an exception if a segment any characters other than pchar
              characters. [M1.6]
-            
+
              Throws an exception if a segment contain percent-encoded forward slash
              ('/'), or backward slash ('\') characters. [M1.7]
-            
+
              Throws an exception if a segment contain percent-encoded unreserved
              characters. [M1.8]
-            
+
              @param segment
                         The segment to check
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePartName.ThrowExceptionIfPartNameNotStartsWithForwardSlashChar(System.Uri)">
              Throws an exception if the specified part name doesn't start with a
              forward slash character '/'. [M1.4]
-            
+
              @param partUri
                         The part name to check.
              @throws InvalidFormatException
@@ -2206,7 +2202,7 @@
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePartName.ThrowExceptionIfPartNameEndsWithForwardSlashChar(System.Uri)">
              Throws an exception if the specified part name ends with a forwar slash
              character '/'. [M1.5]
-            
+
              @param partUri
                         The part name to check.
              @throws InvalidFormatException
@@ -2215,7 +2211,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePartName.ThrowExceptionIfAbsoluteUri(System.Uri)">
              Throws an exception if the specified URI is absolute.
-            
+
              @param partUri
                         The URI to check.
              @throws InvalidFormatException
@@ -2223,7 +2219,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagePartName.Compare(NPOI.OpenXml4Net.OPC.PackagePartName,NPOI.OpenXml4Net.OPC.PackagePartName)">
              Compare two part name following the rule M1.12 :
-            
+
              Part name equivalence is determined by comparing part names as
              case-insensitive ASCII strings. Packages shall not contain equivalent
              part names and package implementers shall neither create nor recognize
@@ -2238,22 +2234,22 @@
         <member name="P:NPOI.OpenXml4Net.OPC.PackagePartName.Extension">
              Retrieves the extension of the part name if any. If there is no extension
              returns an empty String. Example : '/document/content.xml' => 'xml'
-            
+
              @return The extension of the part name.
         </member>
         <member name="P:NPOI.OpenXml4Net.OPC.PackagePartName.Name">
              Get this part name.
-            
+
              @return The name of this part name.
         </member>
         <member name="P:NPOI.OpenXml4Net.OPC.PackagePartName.URI">
              Part name property getter.
-            
+
              @return This part name URI.
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.PackageRelationship">
             A part relationship.
-            
+
             @author Julien Chable
             @version 1.0
         </member>
@@ -2277,7 +2273,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackageRelationship.#ctor(NPOI.OpenXml4Net.OPC.OPCPackage,NPOI.OpenXml4Net.OPC.PackagePart,System.Uri,NPOI.OpenXml4Net.OPC.TargetMode,System.String,System.String)">
             Constructor.
-            
+
             @param pkg
             @param sourcePart
             @param targetUri
@@ -2298,12 +2294,12 @@
             @return the source
         </member>
         <member name="P:NPOI.OpenXml4Net.OPC.PackageRelationship.SourceUri">
-            
+
             @return URL of the source part of this relationship
         </member>
         <member name="P:NPOI.OpenXml4Net.OPC.PackageRelationship.TargetMode">
             public URI getSourceUri(){ }
-            
+
             @return the targetMode
         </member>
         <member name="P:NPOI.OpenXml4Net.OPC.PackageRelationship.TargetUri">
@@ -2312,7 +2308,7 @@
         <member name="T:NPOI.OpenXml4Net.OPC.PackageRelationshipCollection">
             Represents a collection of PackageRelationship elements that are owned by a
             given PackagePart or the Package.
-            
+
             @author Julien Chable, CDubettier
             @version 0.1
         </member>
@@ -2339,11 +2335,11 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackageRelationshipCollection.#ctor(NPOI.OpenXml4Net.OPC.PackageRelationshipCollection,System.String)">
             Copy constructor.
-            
+
             This collection will contain only elements from the specified collection
             for which the type is compatible with the specified relationship type
             filter.
-            
+
             @param coll
                        Collection to import.
             @param filter
@@ -2354,16 +2350,16 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackageRelationshipCollection.#ctor(NPOI.OpenXml4Net.OPC.PackagePart)">
             Constructor.
-            
+
             @throws InvalidFormatException
                         Throws if the format of the content part is invalid.
-            
+
             @throws InvalidOperationException
                         Throws if the specified part is a relationship part.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackageRelationshipCollection.#ctor(NPOI.OpenXml4Net.OPC.OPCPackage,NPOI.OpenXml4Net.OPC.PackagePart)">
             Constructor. Parse the existing package relationship part if one exists.
-            
+
             @param container
                        The parent package.
             @param part
@@ -2375,7 +2371,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackageRelationshipCollection.GetRelationshipPartName(NPOI.OpenXml4Net.OPC.PackagePart)">
             Get the relationship part name of the specified part.
-            
+
             @param part
                        The part .
             @return The relationship part name of the specified part. Be careful,
@@ -2386,13 +2382,13 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackageRelationshipCollection.AddRelationship(NPOI.OpenXml4Net.OPC.PackageRelationship)">
             Add the specified relationship to the collection.
-            
+
             @param relPart
                        The relationship to add.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackageRelationshipCollection.AddRelationship(System.Uri,NPOI.OpenXml4Net.OPC.TargetMode,System.String,System.String)">
             Add a relationship to the collection.
-            
+
             @param targetUri
                        Target URI.
             @param targetMode
@@ -2406,32 +2402,32 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackageRelationshipCollection.RemoveRelationship(System.String)">
             Remove a relationship by its ID.
-            
+
             @param id
                        The relationship ID to Remove.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackageRelationshipCollection.RemoveRelationship(NPOI.OpenXml4Net.OPC.PackageRelationship)">
             Remove a relationship by its reference.
-            
+
             @param rel
                        The relationship to delete.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackageRelationshipCollection.GetRelationship(System.Int32)">
             Retrieves a relationship by its index in the collection.
-            
+
             @param index
                        Must be a value between [0-relationships_count-1]
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackageRelationshipCollection.GetRelationshipByID(System.String)">
             Retrieves a package relationship based on its id.
-            
+
             @param id
                        ID of the package relationship to retrieve.
             @return The package relationship identified by the specified id.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackageRelationshipCollection.ParseRelationshipsPart(NPOI.OpenXml4Net.OPC.PackagePart)">
             Parse the relationship part and add all relationship in this collection.
-            
+
             @param relPart
                        The package part to parse.
             @throws InvalidFormatException
@@ -2439,7 +2435,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackageRelationshipCollection.GetRelationships(System.String)">
             Retrieves all relations with the specified type.
-            
+
             @param typeFilter
                        Relationship type filter. If <b>null</b> then all
                        relationships are returned.
@@ -2451,7 +2447,7 @@
         <member name="M:NPOI.OpenXml4Net.OPC.PackageRelationshipCollection.Iterator(System.String)">
             Get an iterator of a collection with all relationship with the specified
             type.
-            
+
             @param typeFilter
                        Type filter.
             @return An iterator to a collection containing all relationships with the
@@ -2465,7 +2461,7 @@
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.PackageRelationshipTypes">
              Relationship types.
-            
+
              @author Julien Chable
              @version 0.2
         </member>
@@ -2504,7 +2500,7 @@
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.PackagingUriHelper">
              Helper for part and pack Uri.
-            
+
              @author Julien Chable, CDubet, Kim Ung
              @version 0.1
         </member>
@@ -2549,7 +2545,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagingUriHelper.IsRelationshipPartURI(System.Uri)">
              Know if the specified Uri is a relationship part name.
-            
+
              @param partUri
                         Uri to check.
              @return <i>true</i> if the Uri <i>false</i>.
@@ -2565,10 +2561,10 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagingUriHelper.Combine(System.Uri,System.Uri)">
              Combine two URIs.
-            
+
              @param prefix the prefix Uri
              @param suffix the suffix Uri
-            
+
              @return the Combined Uri
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagingUriHelper.Combine(System.String,System.String)">
@@ -2576,7 +2572,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagingUriHelper.RelativizeUri(System.Uri,System.Uri,System.Boolean)">
              Fully relativize the source part Uri against the target part Uri.
-            
+
              @param sourceURI
                         The source part Uri.
              @param targetURI
@@ -2587,7 +2583,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagingUriHelper.RelativizeUri(System.Uri,System.Uri)">
              Fully relativize the source part URI against the target part URI.
-            
+
              @param sourceURI
                         The source part URI.
              @param targetURI
@@ -2598,7 +2594,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagingUriHelper.ResolvePartUri(System.Uri,System.Uri)">
              Resolve a source uri against a target.
-            
+
              @param sourcePartUri
                         The source Uri.
              @param targetUri
@@ -2610,7 +2606,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagingUriHelper.GetSourcePartUriFromRelationshipPartUri(System.Uri)">
              Get the source part Uri from a specified relationships part.
-            
+
              @param relationshipPartUri
                         The relationship part use to retrieve the source part.
              @return The source part Uri from the specified relationships part.
@@ -2618,7 +2614,7 @@
         <member name="M:NPOI.OpenXml4Net.OPC.PackagingUriHelper.CreatePartName(System.Uri)">
              Create an OPC compliant part name by throwing an exception if the Uri is
              not valid.
-            
+
              @param partUri
                         The part name Uri to validate.
              @return A valid part name object, else <code>null</code>.
@@ -2627,7 +2623,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagingUriHelper.CreatePartName(System.String)">
              Create an OPC compliant part name.
-            
+
              @param partName
                         The part name to validate.
              @return The correspondant part name if valid, else <code>null</code>.
@@ -2637,7 +2633,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagingUriHelper.CreatePartName(System.String,NPOI.OpenXml4Net.OPC.PackagePart)">
              Create an OPC compliant part name by resolving it using a base part.
-            
+
              @param partName
                         The part name to validate.
              @param relativePart
@@ -2649,7 +2645,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagingUriHelper.CreatePartName(System.Uri,NPOI.OpenXml4Net.OPC.PackagePart)">
              Create an OPC compliant part name by resolving it using a base part.
-            
+
              @param partName
                         The part name Uri to validate.
              @param relativePart
@@ -2662,31 +2658,30 @@
         <member name="M:NPOI.OpenXml4Net.OPC.PackagingUriHelper.IsValidPartName(System.Uri)">
              Validate a part Uri by returning a bool.
              ([M1.1],[M1.3],[M1.4],[M1.5],[M1.6])
-            
+
              (OPC Specifications 8.1.1 Part names) :
-            
+
              Part Name Syntax
-            
+
              The part name grammar is defined as follows:
-            
+
              <i>part_name = 1*( "/" segment )
-            
+
              segment = 1*( pchar )</i>
-            
-            
+
              (pchar is defined in RFC 3986)
-            
+
              @param partUri
                         The Uri to validate.
              @return <b>true</b> if the Uri is valid to the OPC Specifications, else
                      <b>false</b>
-            
+
              @see #CreatePartName(Uri)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.PackagingUriHelper.DecodeURI(System.Uri)">
              Decode a Uri by converting all percent encoded character into a String
              character.
-            
+
              @param uri
                         The Uri to decode.
              @return The specified Uri in a String with converted percent encoded
@@ -2697,7 +2692,7 @@
         <member name="M:NPOI.OpenXml4Net.OPC.PackagingUriHelper.GetRelationshipPartName(NPOI.OpenXml4Net.OPC.PackagePartName)">
              Build a part name where the relationship should be stored ((ex
              /word/document.xml -> /word/_rels/document.xml.rels)
-            
+
              @param partName
                         Source part Uri
              @return the full path (as Uri) of the relation file
@@ -2706,12 +2701,12 @@
         </member>
         <member name="P:NPOI.OpenXml4Net.OPC.PackagingUriHelper.PackageRootUri">
              Gets the Uri for the package root.
-            
+
              @return Uri of the package root.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.StreamHelper.SaveXmlInStream(System.Xml.XmlDocument,System.IO.Stream)">
              Turning the DOM4j object in the specified output stream.
-            
+
              @param xmlContent
                         The XML document.
              @param outStream
@@ -2721,7 +2716,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.StreamHelper.CopyStream(System.IO.Stream,System.IO.Stream)">
              Copy the input stream into the output stream.
-            
+
              @param inStream
                         The source stream.
              @param outStream
@@ -2731,19 +2726,19 @@
         <member name="T:NPOI.OpenXml4Net.OPC.TargetMode">
              Specifies whether the target of a PackageRelationship is inside or outside a
              Package.
-            
+
              @author Julien Chable
              @version 1.0
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.TargetMode.Internal">
-            The relationship references a resource that is external to the package. 
+            The relationship references a resource that is external to the package.
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.TargetMode.External">
-            The relationship references a part that is inside the package. 
+            The relationship references a part that is inside the package.
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.ZipPackage">
              Physical zip package.
-            
+
              @author Julien Chable
         </member>
         <member name="F:NPOI.OpenXml4Net.OPC.ZipPackage.zipArchive">
@@ -2755,7 +2750,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.ZipPackage.#ctor(System.IO.Stream,NPOI.OpenXml4Net.OPC.PackageAccess)">
              Constructor. <b>Operation not supported.</b>
-            
+
              @param in
                         Zip input stream to load.
              @param access
@@ -2765,7 +2760,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.ZipPackage.#ctor(System.String,NPOI.OpenXml4Net.OPC.PackageAccess)">
              Constructor. Opens a Zip based Open XML document.
-            
+
              @param path
                         The path of the file to open or create.
              @param access
@@ -2775,7 +2770,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.ZipPackage.#ctor(System.IO.FileInfo,NPOI.OpenXml4Net.OPC.PackageAccess)">
              Constructor. Opens a Zip based Open XML document.
-            
+
              @param file
                         The file to open or create.
              @param access
@@ -2788,7 +2783,7 @@
              been yet inspect to retrieve all the parts, this method will open the
              archive and look for all parts contain inside it. If the package part
              list is not empty, it will be emptied.
-            
+
              @return All parts contain in this package.
              @throws InvalidFormatException
                          Throws if the package is not valid.
@@ -2799,17 +2794,16 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.ZipPackage.CreatePartImpl(NPOI.OpenXml4Net.OPC.PackagePartName,System.String,System.Boolean)">
              Create a new MemoryPackagePart from the specified URI and content type
-            
-            
+
              aram partName The part URI.
-            
+
              @param contentType
                         The part content type.
              @return The newly created zip package part, else <b>null</b>.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.ZipPackage.RemovePartImpl(NPOI.OpenXml4Net.OPC.PackagePartName)">
              Delete a part from the package
-            
+
              @throws ArgumentException
                          Throws if the part URI is nulll or invalid.
         </member>
@@ -2818,12 +2812,12 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.ZipPackage.CloseImpl">
              Close and save the package.
-            
+
              @see #close()
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.ZipPackage.GenerateTempFileName(System.String)">
              Create a unique identifier to be use as a temp file name.
-            
+
              @return A unique identifier use to be use as a temp file name.
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.ZipPackage.RevertImpl">
@@ -2833,27 +2827,25 @@
         <member name="M:NPOI.OpenXml4Net.OPC.ZipPackage.GetPartImpl(NPOI.OpenXml4Net.OPC.PackagePartName)">
              Implement the getPart() method to retrieve a part from its URI in the
              current package
-            
-            
+
              @see #getPart(PackageRelationship)
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.ZipPackage.SaveImpl(System.IO.Stream)">
              Save this package into the specified stream
-            
-            
+
              @param outputStream
                         The stream use to save this package.
-            
+
              @see #save(OutputStream)
         </member>
         <member name="P:NPOI.OpenXml4Net.OPC.ZipPackage.ZipArchive">
              Get the zip archive
-            
+
              @return The zip archive.
         </member>
         <member name="T:NPOI.OpenXml4Net.OPC.ZipPackagePart">
             Zip implementation of a PackagePart.
-            
+
             @author Julien Chable
             @version 1.0
             @see PackagePart
@@ -2863,7 +2855,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.ZipPackagePart.#ctor(NPOI.OpenXml4Net.OPC.OPCPackage,NPOI.OpenXml4Net.OPC.PackagePartName,System.String)">
             Constructor.
-            
+
             @param container
                        The container package.
             @param partName
@@ -2875,7 +2867,7 @@
         </member>
         <member name="M:NPOI.OpenXml4Net.OPC.ZipPackagePart.#ctor(NPOI.OpenXml4Net.OPC.OPCPackage,ICSharpCode.SharpZipLib.Zip.ZipEntry,NPOI.OpenXml4Net.OPC.PackagePartName,System.String)">
             Constructor.
-            
+
             @param container
                        The container package.
             @param zipEntry
@@ -2890,12 +2882,12 @@
         <member name="M:NPOI.OpenXml4Net.OPC.ZipPackagePart.GetInputStreamImpl">
             Implementation of the getInputStream() which return the inputStream of
             this part zip entry.
-            
+
             @return Input stream of this part zip entry.
         </member>
         <member name="P:NPOI.OpenXml4Net.OPC.ZipPackagePart.ZipArchive">
             Get the zip entry of this part.
-            
+
             @return The zip entry in the zip structure coresponding to this part.
         </member>
         <member name="T:NPOI.OpenXml4Net.Util.ZipEntrySource">
@@ -2906,11 +2898,11 @@
              being annoyingly very different.
         </member>
         <member name="M:NPOI.OpenXml4Net.Util.ZipEntrySource.GetInputStream(ICSharpCode.SharpZipLib.Zip.ZipEntry)">
-            Returns an InputStream of the decompressed 
+            Returns an InputStream of the decompressed
              data that makes up the entry
         </member>
         <member name="M:NPOI.OpenXml4Net.Util.ZipEntrySource.Close">
-            Indicates we are done with reading, and 
+            Indicates we are done with reading, and
              resources may be freed
         </member>
         <member name="P:NPOI.OpenXml4Net.Util.ZipEntrySource.Entries">
@@ -2930,7 +2922,7 @@
              done, to free up that memory!
         </member>
         <member name="M:NPOI.OpenXml4Net.Util.ZipInputStreamZipEntrySource.#ctor(ICSharpCode.SharpZipLib.Zip.ZipInputStream)">
-            Reads all the entries from the ZipInputStream 
+            Reads all the entries from the ZipInputStream
              into memory, and closes the source stream.
             We'll then eat lots of memory, but be able to
              work with the entries at-will.
@@ -2943,7 +2935,7 @@
             So we can close the real zip entry and still
              effectively work with it.
             Holds the (decompressed!) data in memory, so
-             close this as soon as you can! 
+             close this as soon as you can!
         </member>
     </members>
 </doc>
