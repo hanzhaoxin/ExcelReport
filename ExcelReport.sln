@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinExample", "WinExample\Wi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebExample", "WebExample\WebExample.csproj", "{93341C9C-44C9-47F3-839F-7AE043A5AC99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageExample", "ImageExample\ImageExample.csproj", "{94B7D547-92A1-41A7-B90F-D681A0103A36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,16 @@ Global
 		{93341C9C-44C9-47F3-839F-7AE043A5AC99}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{93341C9C-44C9-47F3-839F-7AE043A5AC99}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{93341C9C-44C9-47F3-839F-7AE043A5AC99}.Release|x86.ActiveCfg = Release|Any CPU
+		{94B7D547-92A1-41A7-B90F-D681A0103A36}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{94B7D547-92A1-41A7-B90F-D681A0103A36}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{94B7D547-92A1-41A7-B90F-D681A0103A36}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{94B7D547-92A1-41A7-B90F-D681A0103A36}.Debug|x86.ActiveCfg = Debug|x86
+		{94B7D547-92A1-41A7-B90F-D681A0103A36}.Debug|x86.Build.0 = Debug|x86
+		{94B7D547-92A1-41A7-B90F-D681A0103A36}.Release|Any CPU.ActiveCfg = Release|x86
+		{94B7D547-92A1-41A7-B90F-D681A0103A36}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{94B7D547-92A1-41A7-B90F-D681A0103A36}.Release|Mixed Platforms.Build.0 = Release|x86
+		{94B7D547-92A1-41A7-B90F-D681A0103A36}.Release|x86.ActiveCfg = Release|x86
+		{94B7D547-92A1-41A7-B90F-D681A0103A36}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,5 +83,6 @@ Global
 		{E0C0B191-51CA-417D-82B5-E82A5FF15BB0} = {1953EFAE-93C4-4B0D-86FB-A163C203B73E}
 		{E62EE638-59F2-4909-9505-0511C7062727} = {78A1B2DD-FD19-4AB9-908E-267D418B6E1F}
 		{93341C9C-44C9-47F3-839F-7AE043A5AC99} = {78A1B2DD-FD19-4AB9-908E-267D418B6E1F}
+		{94B7D547-92A1-41A7-B90F-D681A0103A36} = {78A1B2DD-FD19-4AB9-908E-267D418B6E1F}
 	EndGlobalSection
 EndGlobal
