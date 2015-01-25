@@ -67,6 +67,7 @@
     <Compile Include="Extend\ICellExtend.cs" />
     <Compile Include="Formatter\CellFormatter.cs" />
     <Compile Include="Formatter\ElementFormatter.cs" />
+    <Compile Include="Formatter\PartFormatter.cs" />
     <Compile Include="Formatter\TableFormatter\TableFormatter.cs" />
     <Compile Include="Parameter\Parameter.cs" />
     <Compile Include="Parameter\ParameterCollection.cs" />

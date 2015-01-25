@@ -20,3 +20,4 @@ G:\GitHub\ExcelReport\ExcelReport\bin\Release\NPOI.OOXML.xml
 G:\GitHub\ExcelReport\ExcelReport\bin\Release\NPOI.OpenXml4Net.xml
 G:\GitHub\ExcelReport\ExcelReport\obj\Release\ExcelReport.dll
 G:\GitHub\ExcelReport\ExcelReport\obj\Release\ExcelReport.pdb
+G:\GitHub\ExcelReport\ExcelReport\obj\Release\ExcelReport.csprojResolveAssemblyReference.cache

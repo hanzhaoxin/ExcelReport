@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebExample", "WebExample\We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageExample", "ImageExample\ImageExample.csproj", "{94B7D547-92A1-41A7-B90F-D681A0103A36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartFormatterExample", "PartFormatterExample\PartFormatterExample.csproj", "{32E0538E-B50F-43A3-A98A-24D5719EFC72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,16 @@ Global
 		{94B7D547-92A1-41A7-B90F-D681A0103A36}.Release|Mixed Platforms.Build.0 = Release|x86
 		{94B7D547-92A1-41A7-B90F-D681A0103A36}.Release|x86.ActiveCfg = Release|x86
 		{94B7D547-92A1-41A7-B90F-D681A0103A36}.Release|x86.Build.0 = Release|x86
+		{32E0538E-B50F-43A3-A98A-24D5719EFC72}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{32E0538E-B50F-43A3-A98A-24D5719EFC72}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{32E0538E-B50F-43A3-A98A-24D5719EFC72}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{32E0538E-B50F-43A3-A98A-24D5719EFC72}.Debug|x86.ActiveCfg = Debug|x86
+		{32E0538E-B50F-43A3-A98A-24D5719EFC72}.Debug|x86.Build.0 = Debug|x86
+		{32E0538E-B50F-43A3-A98A-24D5719EFC72}.Release|Any CPU.ActiveCfg = Release|x86
+		{32E0538E-B50F-43A3-A98A-24D5719EFC72}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{32E0538E-B50F-43A3-A98A-24D5719EFC72}.Release|Mixed Platforms.Build.0 = Release|x86
+		{32E0538E-B50F-43A3-A98A-24D5719EFC72}.Release|x86.ActiveCfg = Release|x86
+		{32E0538E-B50F-43A3-A98A-24D5719EFC72}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,5 +96,6 @@ Global
 		{E62EE638-59F2-4909-9505-0511C7062727} = {78A1B2DD-FD19-4AB9-908E-267D418B6E1F}
 		{93341C9C-44C9-47F3-839F-7AE043A5AC99} = {78A1B2DD-FD19-4AB9-908E-267D418B6E1F}
 		{94B7D547-92A1-41A7-B90F-D681A0103A36} = {78A1B2DD-FD19-4AB9-908E-267D418B6E1F}
+		{32E0538E-B50F-43A3-A98A-24D5719EFC72} = {78A1B2DD-FD19-4AB9-908E-267D418B6E1F}
 	EndGlobalSection
 EndGlobal
