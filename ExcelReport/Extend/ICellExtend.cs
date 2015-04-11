@@ -1,11 +1,4 @@
-﻿/*
- 类：ICellExtend
- 描述：为ICell扩展方法
- 编 码 人：韩兆新 日期：2015年01月23日
- 修改记录：
-
-*/
-using NPOI.SS.UserModel;
+﻿using NPOI.SS.UserModel;
 
 namespace ExcelReport
 {

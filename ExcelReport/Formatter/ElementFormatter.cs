@@ -3,8 +3,7 @@
  描述：（元素）格式化器（抽象）
  编 码 人：韩兆新 日期：2015年01月17日
  修改记录：
-    日期：2015年01月23日  修改人：韩兆新   修改内容描述：修改了SetCellValue()方法，添加了对图片的处理
- 
+
 */
 
 using System;
@@ -39,6 +38,7 @@ namespace ExcelReport
 
                     var patriarch = cell.Sheet.CreateDrawingPatriarch();
                     var pic = patriarch.CreatePicture(anchor, pictureIdx);
+                    
                 }
                 else
                 {

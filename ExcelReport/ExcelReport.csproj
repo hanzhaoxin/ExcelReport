@@ -30,9 +30,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="NPOI, Version=2.1.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -68,34 +65,26 @@
     <Compile Include="Formatter\CellFormatter.cs" />
     <Compile Include="Formatter\ElementFormatter.cs" />
     <Compile Include="Formatter\PartFormatter.cs" />
+    <Compile Include="Formatter\RepeaterFormatter\RepeaterCellInfo.cs" />
+    <Compile Include="Formatter\RepeaterFormatter\RepeaterFormatter.cs" />
     <Compile Include="Formatter\TableFormatter\TableFormatter.cs" />
     <Compile Include="Parameter\Parameter.cs" />
     <Compile Include="Parameter\ParameterCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
     <Compile Include="SheetFormatterContainer.cs" />
     <Compile Include="SheetFormatterContext.cs" />
     <Compile Include="Formatter\TableFormatter\TableColumnInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Libraries\NPOI.dll" />
-    <EmbeddedResource Include="Libraries\NPOI.OOXML.dll" />
+    <Content Include="Libraries\NPOI.dll" />
+    <Content Include="Libraries\NPOI.OOXML.dll" />
     <Content Include="Libraries\NPOI.OOXML.XML" />
-    <EmbeddedResource Include="Libraries\NPOI.OpenXml4Net.dll" />
+    <Content Include="Libraries\NPOI.OpenXml4Net.dll" />
     <Content Include="Libraries\NPOI.OpenXml4Net.XML" />
-    <EmbeddedResource Include="Libraries\NPOI.OpenXmlFormats.dll" />
+    <Content Include="Libraries\NPOI.OpenXmlFormats.dll" />
     <Content Include="Libraries\NPOI.XML" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

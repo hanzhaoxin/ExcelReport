@@ -1,11 +1,4 @@
-﻿/*
- 类：CellSpan
- 描述：描述单元格的跨度
- 编 码 人：韩兆新 日期：2015年01月23日
- 修改记录：
-
-*/
-namespace ExcelReport
+﻿namespace ExcelReport
 {
     struct CellSpan
     {

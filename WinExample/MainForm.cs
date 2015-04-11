@@ -19,12 +19,14 @@ namespace WinExample
 
             if (DialogResult.OK.Equals(saveFileDlg.ShowDialog()))
             {
+                //实例化一个参数容器，并加载模板填充规则文件
                 ParameterCollection collection = new ParameterCollection();
                 collection.Load(@"Template\Template.xml");
 
+                //实例化一个元素格式化器列表
                 List<ElementFormatter> formatters = new List<ElementFormatter>();
-                formatters.Add(new CellFormatter(collection["GradeDetail", "Dept"], "某某学院"));
-                formatters.Add(new CellFormatter(collection["GradeDetail", "Class"], "某某班级"));
+                formatters.Add(new CellFormatter(collection["GradeDetail", "Dept"], "某某学院"));   //添加一个单元格格式化器
+                formatters.Add(new PartFormatter(collection["GradeDetail", "Class"],"Class" ,"某某班级"));
                 formatters.Add(new CellFormatter(collection["GradeDetail", "StudNo"], "2009*****"));
                 formatters.Add(new CellFormatter(collection["GradeDetail", "StudName"], "韩兆新"));
                 formatters.Add(new CellFormatter(collection["GradeDetail", "ExportDate"], DateTime.Now));
@@ -32,8 +34,9 @@ namespace WinExample
                 List<GradeInfo> gradeInfoList = new List<GradeInfo>();
                 gradeInfoList.Add(new GradeInfo() { CGPA = 18, CourseID = "KC-0001", CourseName = "高等数学", CourseType = "理论课", Credit = 6, EvaluationMode = "考试", GainCredit = 6, GPA = 3, Grade = 86, StudyNature = "初修", Type = "必修课" });
                 gradeInfoList.Add(new GradeInfo() { CGPA = 2, CourseID = "KC-0002", CourseName = "计算机应用基础", CourseType = "理论课", Credit = 2, EvaluationMode = "考试", GainCredit = 2, GPA = 1, Grade = 93, StudyNature = "初修", Type = "必修课" });
-                gradeInfoList.Add(new GradeInfo() { CGPA = 9, CourseID = "KC-0003", CourseName = "C程序设计", CourseType = "理论课", Credit = 3, EvaluationMode = "考试", GainCredit = 3, GPA = 3, Grade = 97, StudyNature = "初修", Type = "必修课", Remark = "备注信息" });
+                gradeInfoList.Add(new GradeInfo() { CGPA = 9, CourseID = "KC-0003", CourseName = @"C程序设计", CourseType = "理论课", Credit = 3, EvaluationMode = "考试", GainCredit = 3, GPA = 3, Grade = 97, StudyNature = "初修", Type = "必修课", Remark = "备注信息" });
 
+                //添加一个Table格式化器
                 formatters.Add(new TableFormatter<GradeInfo>(collection["GradeDetail", "CourseID"].X, gradeInfoList,
                     new TableColumnInfo<GradeInfo>(collection["GradeDetail", "CGPA"].Y, t => t.CGPA),
                     new TableColumnInfo<GradeInfo>(collection["GradeDetail", "CourseID"].Y, t => t.CourseID),
@@ -48,6 +51,7 @@ namespace WinExample
                     new TableColumnInfo<GradeInfo>(collection["GradeDetail", "StudyNature"].Y, t => t.StudyNature),
                     new TableColumnInfo<GradeInfo>(collection["GradeDetail", "Type"].Y, t => t.Type)
                     ));
+                //导出文件到本地
                 Export.ExportToLocal(@"Template\Template.xls", saveFileDlg.FileName,
                     new SheetFormatterContainer("GradeDetail", formatters));
             }
