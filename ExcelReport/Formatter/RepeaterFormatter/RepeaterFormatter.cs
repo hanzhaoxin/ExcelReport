@@ -43,8 +43,13 @@ namespace ExcelReport
             {
                 return;
             }
+            var itemCount = 0;
             foreach (TSource itemSource in _dataSource)
             {
+                if (itemCount++ > 0)
+                {
+                    context.CopyRows(_startTagCell.X, _endTagCell.X);  //追加空行
+                }
                 foreach (RepeaterCellInfo<TSource> cellInfo in _cellInfoList)
                 {
                     var rowIndex = context.GetCurrentRowIndex(cellInfo.CellPoint.X);
@@ -52,9 +57,7 @@ namespace ExcelReport
                     var cell = row.GetCell(cellInfo.CellPoint.Y) ?? row.CreateCell(cellInfo.CellPoint.Y);
                     SetCellValue(cell, cellInfo.DgSetValue(itemSource));
                 }
-                context.CopyRows(_startTagCell.X, _endTagCell.X);  //追加空行
             }
-            context.RemoveRows(_startTagCell.X, _endTagCell.X);   //删除空行
         }
         #endregion
 

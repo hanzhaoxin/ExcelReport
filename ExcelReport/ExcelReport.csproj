@@ -62,6 +62,7 @@
     <Compile Include="Export\Export.cs" />
     <Compile Include="Export\ExportHelper.cs" />
     <Compile Include="Extend\ICellExtend.cs" />
+    <Compile Include="Extend\ISheetExtend.cs" />
     <Compile Include="Formatter\CellFormatter.cs" />
     <Compile Include="Formatter\ElementFormatter.cs" />
     <Compile Include="Formatter\PartFormatter.cs" />
@@ -70,6 +71,8 @@
     <Compile Include="Formatter\TableFormatter\TableFormatter.cs" />
     <Compile Include="Parameter\Parameter.cs" />
     <Compile Include="Parameter\ParameterCollection.cs" />
+    <Compile Include="PicturesInfo.cs" />
+    <Compile Include="PicturesStyle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SheetFormatterContainer.cs" />
     <Compile Include="SheetFormatterContext.cs" />

@@ -150,6 +150,15 @@ namespace ExcelReport
                 newRow.Height = row.Height;
                 newRow.ZeroHeight = row.ZeroHeight;
             }
+            //获取模板行内的图片
+            var picInfoList = Sheet.GetAllPictureInfos(GetCurrentRowIndex(templateStartRowIndex), GetCurrentRowIndex(templateEndRowIndex), null, null);
+            //复制图片
+            foreach (var picInfo in picInfoList)
+            {
+                picInfo.MaxRow += span;
+                picInfo.MinRow += span;
+                Sheet.AddPicture(picInfo);
+            }
             _increaseRowsCount += span;
         }
         #endregion

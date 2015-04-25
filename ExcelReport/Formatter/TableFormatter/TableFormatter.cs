@@ -45,17 +45,20 @@ namespace ExcelReport
             {
                 return;
             }
+            var itemCount = 0;
             foreach (TSource rowSource in _dataSource)
             {
+                if (itemCount++ > 0)
+                {
+                    context.InsertEmptyRow(_templateRowIndex);  //追加空行
+                }
                 var row = context.Sheet.GetRow(context.GetCurrentRowIndex(_templateRowIndex));
                 foreach (TableColumnInfo<TSource> colInfo in _columnInfoList)
                 {
                     var cell = row.GetCell(colInfo.ColumnIndex);
                     SetCellValue(cell, colInfo.DgSetValue(rowSource));
                 }
-                context.InsertEmptyRow(_templateRowIndex);  //追加空行
             }
-            context.RemoveRow(_templateRowIndex);   //删除空行
         }
 
         #endregion 格式化操作
