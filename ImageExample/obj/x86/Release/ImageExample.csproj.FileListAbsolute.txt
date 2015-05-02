@@ -1,0 +1,10 @@
+E:\MyFile\Projects\ExcelReport\ImageExample\bin\Release\Image\BMP.bmp
+E:\MyFile\Projects\ExcelReport\ImageExample\bin\Release\Image\PNG.png
+E:\MyFile\Projects\ExcelReport\ImageExample\bin\Release\Image\JPG.jpg
+E:\MyFile\Projects\ExcelReport\ImageExample\bin\Release\ImageExample.exe
+E:\MyFile\Projects\ExcelReport\ImageExample\bin\Release\ImageExample.pdb
+E:\MyFile\Projects\ExcelReport\ImageExample\obj\x86\Release\ImageExample.Main.resources
+E:\MyFile\Projects\ExcelReport\ImageExample\obj\x86\Release\ImageExample.Properties.Resources.resources
+E:\MyFile\Projects\ExcelReport\ImageExample\obj\x86\Release\ImageExample.csproj.GenerateResource.Cache
+E:\MyFile\Projects\ExcelReport\ImageExample\obj\x86\Release\ImageExample.exe
+E:\MyFile\Projects\ExcelReport\ImageExample\obj\x86\Release\ImageExample.pdb

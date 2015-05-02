@@ -1,0 +1,11 @@
+E:\MyProject\ExcelReport\ExcelReport\bin\Release\ExcelReport.dll
+E:\MyProject\ExcelReport\ExcelReport\bin\Release\ExcelReport.pdb
+E:\MyProject\ExcelReport\ExcelReport\bin\Release\NPOI.dll
+E:\MyProject\ExcelReport\ExcelReport\bin\Release\NPOI.OOXML.dll
+E:\MyProject\ExcelReport\ExcelReport\bin\Release\NPOI.OpenXml4Net.dll
+E:\MyProject\ExcelReport\ExcelReport\bin\Release\NPOI.OpenXmlFormats.dll
+E:\MyProject\ExcelReport\ExcelReport\bin\Release\NPOI.xml
+E:\MyProject\ExcelReport\ExcelReport\bin\Release\NPOI.OOXML.xml
+E:\MyProject\ExcelReport\ExcelReport\bin\Release\NPOI.OpenXml4Net.xml
+E:\MyProject\ExcelReport\ExcelReport\obj\Release\ExcelReport.dll
+E:\MyProject\ExcelReport\ExcelReport\obj\Release\ExcelReport.pdb

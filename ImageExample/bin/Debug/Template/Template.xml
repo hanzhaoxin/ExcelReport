@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ArrayOfParameter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Parameter>
+    <SheetName>Sheet1</SheetName>
+    <ParameterName>BMP</ParameterName>
+    <CellPoint>
+      <X>2</X>
+      <Y>0</Y>
+    </CellPoint>
+  </Parameter>
+  <Parameter>
+    <SheetName>Sheet1</SheetName>
+    <ParameterName>PNG</ParameterName>
+    <CellPoint>
+      <X>2</X>
+      <Y>7</Y>
+    </CellPoint>
+  </Parameter>
+  <Parameter>
+    <SheetName>Sheet1</SheetName>
+    <ParameterName>JPG</ParameterName>
+    <CellPoint>
+      <X>2</X>
+      <Y>11</Y>
+    </CellPoint>
+  </Parameter>
+</ArrayOfParameter>
