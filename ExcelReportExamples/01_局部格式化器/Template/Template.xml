@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ArrayOfParameter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Parameter>
+    <SheetName>局部格式化器</SheetName>
+    <ParameterName>UserName</ParameterName>
+    <CellPoint>
+      <X>3</X>
+      <Y>2</Y>
+    </CellPoint>
+  </Parameter>
+  <Parameter>
+    <SheetName>局部格式化器</SheetName>
+    <ParameterName>GroupNo</ParameterName>
+    <CellPoint>
+      <X>3</X>
+      <Y>2</Y>
+    </CellPoint>
+  </Parameter>
+</ArrayOfParameter>
