@@ -101,6 +101,9 @@
     <None Include="Template\演示：工资条模板.xls">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Template\演示：工资条模板.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Template\演示：工资条模板.xml">

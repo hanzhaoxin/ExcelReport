@@ -74,7 +74,7 @@ namespace _01_生成工资表_工资条报表
                     ));
 
                 //导出文件到本地
-                ExportHelper.ExportToLocal(@"Template\演示：工资条模板.xls", saveFileDlg.FileName,
+                ExportHelper.ExportToLocal(@"Template\演示：工资条模板.xlsx", saveFileDlg.FileName,
                     new SheetFormatterContainer("工资表", payTableFormatters),
                     new SheetFormatterContainer("工资条", payStripFormatters)
                     );

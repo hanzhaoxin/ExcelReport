@@ -1,1 +1,8 @@
 E:\MyFile\ExcelReport\ExcelReportExamples\01_生成工资表-工资条报表\bin\Debug\01_生成工资表-工资条报表.exe.config
+G:\GitHub\ExcelReport\ExcelReportExamples\01_生成工资表-工资条报表\bin\Debug\01_生成工资表-工资条报表.exe
+G:\GitHub\ExcelReport\ExcelReportExamples\01_生成工资表-工资条报表\bin\Debug\ExcelReport.dll
+G:\GitHub\ExcelReport\ExcelReportExamples\01_生成工资表-工资条报表\bin\Debug\ICSharpCode.SharpZipLib.dll
+G:\GitHub\ExcelReport\ExcelReportExamples\01_生成工资表-工资条报表\bin\Debug\NPOI.dll
+G:\GitHub\ExcelReport\ExcelReportExamples\01_生成工资表-工资条报表\bin\Debug\NPOI.OOXML.dll
+G:\GitHub\ExcelReport\ExcelReportExamples\01_生成工资表-工资条报表\bin\Debug\NPOI.OpenXml4Net.dll
+G:\GitHub\ExcelReport\ExcelReportExamples\01_生成工资表-工资条报表\bin\Debug\NPOI.OpenXmlFormats.dll

@@ -24,3 +24,16 @@ E:\MyFile\ExcelReport\ExcelReport\ExcelReport\bin\Debug\NPOI.OpenXml4Net.xml
 E:\MyFile\ExcelReport\ExcelReport\ExcelReport\obj\Debug\ExcelReport.csprojResolveAssemblyReference.cache
 E:\MyFile\ExcelReport\ExcelReport\ExcelReport\obj\Debug\ExcelReport.dll
 E:\MyFile\ExcelReport\ExcelReport\ExcelReport\obj\Debug\ExcelReport.pdb
+G:\GitHub\ExcelReport\ExcelReport\ExcelReport\bin\Debug\ExcelReport.dll
+G:\GitHub\ExcelReport\ExcelReport\ExcelReport\bin\Debug\ExcelReport.pdb
+G:\GitHub\ExcelReport\ExcelReport\ExcelReport\bin\Debug\ICSharpCode.SharpZipLib.dll
+G:\GitHub\ExcelReport\ExcelReport\ExcelReport\bin\Debug\NPOI.dll
+G:\GitHub\ExcelReport\ExcelReport\ExcelReport\bin\Debug\NPOI.OOXML.dll
+G:\GitHub\ExcelReport\ExcelReport\ExcelReport\bin\Debug\NPOI.OpenXml4Net.dll
+G:\GitHub\ExcelReport\ExcelReport\ExcelReport\bin\Debug\NPOI.OpenXmlFormats.dll
+G:\GitHub\ExcelReport\ExcelReport\ExcelReport\bin\Debug\NPOI.xml
+G:\GitHub\ExcelReport\ExcelReport\ExcelReport\bin\Debug\NPOI.OOXML.xml
+G:\GitHub\ExcelReport\ExcelReport\ExcelReport\bin\Debug\NPOI.OpenXml4Net.xml
+G:\GitHub\ExcelReport\ExcelReport\ExcelReport\obj\Debug\ExcelReport.dll
+G:\GitHub\ExcelReport\ExcelReport\ExcelReport\obj\Debug\ExcelReport.pdb
+G:\GitHub\ExcelReport\ExcelReport\ExcelReport\obj\Debug\ExcelReport.csprojResolveAssemblyReference.cache

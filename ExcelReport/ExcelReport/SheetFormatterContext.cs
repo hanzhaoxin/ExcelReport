@@ -124,9 +124,7 @@ namespace ExcelReport
             for (int i = templateStartRowIndex; i <= templateEndRowIndex; i++)
             {
                 var row = Sheet.GetRow(GetCurrentRowIndex(i));
-                var newRow = Sheet.CopyRow(GetCurrentRowIndex(i), GetCurrentRowIndex(i + span));
-                newRow.Height = row.Height;
-                newRow.ZeroHeight = row.ZeroHeight;
+                var newRow = row.CopyTo(GetCurrentRowIndex(i + span));
             }
             //获取模板行内的合并区域
             var regionInfoList = Sheet.GetAllMergedRegionInfos(GetCurrentRowIndex(templateStartRowIndex), GetCurrentRowIndex(templateEndRowIndex), null, null);
