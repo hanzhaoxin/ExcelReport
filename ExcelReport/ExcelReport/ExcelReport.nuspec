@@ -6,12 +6,12 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
-    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
-    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <licenseUrl>https://github.com/hanzhaoxin/ExcelReport/blob/master/License.txt</licenseUrl>
+    <projectUrl>https://github.com/hanzhaoxin</projectUrl>
+    <iconUrl>http://images.cnblogs.com/cnblogs_com/hanzhaoxin/638238/o_ExcelReport.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <releaseNotes>Repair. XLSX document export problem.</releaseNotes>
     <copyright>Copyright 2015</copyright>
   </metadata>
 </package>
