@@ -11,7 +11,7 @@
     <iconUrl>http://images.cnblogs.com/cnblogs_com/hanzhaoxin/638238/o_ExcelReport.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Repair. XLSX document export problem.</releaseNotes>
+    <releaseNotes>Modification function InsertEmptyRow().</releaseNotes>
     <copyright>Copyright 2015</copyright>
   </metadata>
 </package>
