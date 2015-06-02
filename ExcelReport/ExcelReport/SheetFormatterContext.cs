@@ -8,7 +8,7 @@
                  添加了删除行组的方法RemoveRows();
     2: 修改人：韩兆新  日期：2015年05月01日
        修改内容：修改了复制行组的方法CopyRows(),解决了跨多行的合并单元格复制丢失合并信息的问题;
-    2: 修改人：JsonRuby  日期：2015年06月01日
+    3: 修改人：JsonRuby  日期：2015年06月01日
        修改内容：修改了插入空行的方法InsertEmptyRow(),解决了PartFormatter在TableFormatter下格式化异常的问题;
  * 
 */
