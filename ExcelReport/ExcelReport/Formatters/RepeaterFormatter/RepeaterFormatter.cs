@@ -20,6 +20,28 @@ namespace ExcelReport
         private List<RepeaterCellInfo<TSource>> _cellInfoList;
         #endregion
 
+        #region 属性
+        protected Point StartTagCell
+        {
+            get { return _startTagCell; }
+        }
+
+        protected Point EndTagCell
+        {
+            get { return _endTagCell; }
+        }
+
+        protected IEnumerable<TSource> DataSource
+        {
+            get { return _dataSource; }
+        }
+
+        protected List<RepeaterCellInfo<TSource>> CellInfoList
+        {
+            get { return _cellInfoList; }
+        }
+        #endregion
+
         /// 构造函数
         /// <param name="startTagCell"></param>
         /// <param name="endTagCell"></param>
@@ -41,20 +63,20 @@ namespace ExcelReport
         /// <param name="context"></param>
         public override void Format(SheetFormatterContext context)
         {
-            context.ClearRowContent(_startTagCell.X);
-            context.ClearRowContent(_endTagCell.X);
-            if (null == _cellInfoList || _cellInfoList.Count <= 0 || null == _dataSource)
+            context.ClearRowContent(StartTagCell.X);
+            context.ClearRowContent(EndTagCell.X);
+            if (null == CellInfoList || CellInfoList.Count <= 0 || null == DataSource)
             {
                 return;
             }
             var itemCount = 0;
-            foreach (TSource itemSource in _dataSource)
+            foreach (TSource itemSource in DataSource)
             {
                 if (itemCount++ > 0)
                 {
-                    context.CopyRows(_startTagCell.X, _endTagCell.X);  //追加空行
+                    context.CopyRows(StartTagCell.X, EndTagCell.X);  //追加空行
                 }
-                foreach (RepeaterCellInfo<TSource> cellInfo in _cellInfoList)
+                foreach (RepeaterCellInfo<TSource> cellInfo in CellInfoList)
                 {
                     var rowIndex = context.GetCurrentRowIndex(cellInfo.CellPoint.X);
                     var row = context.Sheet.GetRow(rowIndex) ?? context.Sheet.CreateRow(rowIndex);
@@ -76,7 +98,7 @@ namespace ExcelReport
         /// <param name="dgSetValue"></param>
         public void AddCellInfo(Point cellPoint, Func<TSource, object> dgSetValue)
         {
-            _cellInfoList.Add(new RepeaterCellInfo<TSource>(cellPoint,dgSetValue));
+            _cellInfoList.Add(new RepeaterCellInfo<TSource>(cellPoint, dgSetValue));
         }
     }
 }

@@ -17,6 +17,16 @@ namespace ExcelReport
         private Point _cellPoint;
         private object _value;
 
+        protected Point CellPoint
+        {
+            get { return _cellPoint; }
+        }
+
+        protected object Value
+        {
+            get { return _value; }
+        }
+
         #endregion 成员字段及属性
 
         /// 构造函数
@@ -43,18 +53,18 @@ namespace ExcelReport
         /// <param name="context"></param>
         public override void Format(SheetFormatterContext context)
         {
-            var rowIndex = context.GetCurrentRowIndex(_cellPoint.X);
+            var rowIndex = context.GetCurrentRowIndex(CellPoint.X);
             var row = context.Sheet.GetRow(rowIndex);
             if (null == row)
             {
                 row = context.Sheet.CreateRow(rowIndex);
             }
-            var cell = row.GetCell(_cellPoint.Y);
+            var cell = row.GetCell(CellPoint.Y);
             if (null == cell)
             {
-                cell = row.CreateCell(_cellPoint.Y);
+                cell = row.CreateCell(CellPoint.Y);
             }
-            SetCellValue(cell, _value);
+            SetCellValue(cell, Value);
         }
 
     }

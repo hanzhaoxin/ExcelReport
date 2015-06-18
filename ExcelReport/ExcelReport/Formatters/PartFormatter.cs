@@ -19,6 +19,23 @@ namespace ExcelReport
         private string _value;
         #endregion
 
+        #region 属性
+        protected Point CellPoint
+        {
+            get { return _cellPoint; }
+        }
+
+        protected string ParameterName
+        {
+            get { return _parameterName; }
+        }
+
+        protected string Value
+        {
+            get { return _value; }
+        }
+        #endregion
+
         /// 构造函数
         /// <param name="cellPoint"></param>
         /// <param name="parameterName"></param>
@@ -34,20 +51,20 @@ namespace ExcelReport
         /// <param name="context"></param>
         public override void Format(SheetFormatterContext context)
         {
-            var rowIndex = context.GetCurrentRowIndex(_cellPoint.X);
+            var rowIndex = context.GetCurrentRowIndex(CellPoint.X);
             var row = context.Sheet.GetRow(rowIndex);
             if (null == row)
             {
                 row = context.Sheet.CreateRow(rowIndex);
             }
-            var cell = row.GetCell(_cellPoint.Y);
+            var cell = row.GetCell(CellPoint.Y);
             if (null == cell)
             {
-                cell = row.CreateCell(_cellPoint.Y);
+                cell = row.CreateCell(CellPoint.Y);
             }
             if (cell.CellType.Equals(CellType.String))
             {
-                SetCellValue(cell, cell.StringCellValue.Replace(string.Format("$[{0}]", _parameterName), _value));
+                SetCellValue(cell, cell.StringCellValue.Replace(string.Format("$[{0}]", ParameterName), Value));
             }
         }
     }

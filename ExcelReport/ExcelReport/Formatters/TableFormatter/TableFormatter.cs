@@ -21,6 +21,25 @@ namespace ExcelReport
 
         #endregion 成员字段
 
+        #region 属性
+
+        protected int TemplateRowIndex
+        {
+            get { return _templateRowIndex; }
+        }
+
+        protected IEnumerable<TSource> DataSource
+        {
+            get { return _dataSource; }
+        }
+
+        protected List<TableColumnInfo<TSource>> ColumnInfoList
+        {
+            get { return _columnInfoList; }
+        }
+
+        #endregion
+
         /// 构造函数
         /// <param name="templateRowIndex"></param>
         /// <param name="dataSource"></param>
@@ -40,20 +59,20 @@ namespace ExcelReport
         /// <param name="context"></param>
         public override void Format(SheetFormatterContext context)
         {
-            context.ClearRowContent(_templateRowIndex); //清除模板行单元格内容
-            if (null == _columnInfoList || _columnInfoList.Count <= 0 || null == _dataSource)
+            context.ClearRowContent(TemplateRowIndex); //清除模板行单元格内容
+            if (null == ColumnInfoList || ColumnInfoList.Count <= 0 || null == DataSource)
             {
                 return;
             }
             var itemCount = 0;
-            foreach (TSource rowSource in _dataSource)
+            foreach (TSource rowSource in DataSource)
             {
                 if (itemCount++ > 0)
                 {
-                    context.InsertEmptyRow(_templateRowIndex);  //追加空行
+                    context.InsertEmptyRow(TemplateRowIndex);  //追加空行
                 }
-                var row = context.Sheet.GetRow(context.GetCurrentRowIndex(_templateRowIndex));
-                foreach (TableColumnInfo<TSource> colInfo in _columnInfoList)
+                var row = context.Sheet.GetRow(context.GetCurrentRowIndex(TemplateRowIndex));
+                foreach (TableColumnInfo<TSource> colInfo in ColumnInfoList)
                 {
                     var cell = row.GetCell(colInfo.ColumnIndex);
                     SetCellValue(cell, colInfo.DgSetValue(rowSource));
