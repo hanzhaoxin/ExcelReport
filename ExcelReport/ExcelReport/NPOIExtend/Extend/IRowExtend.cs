@@ -48,6 +48,11 @@ namespace ExcelReport
                 if (null != sourceCell.CellStyle) targetCell.CellStyle = sourceCell.CellStyle;
                 if (null != sourceCell.CellComment) targetCell.CellComment = sourceCell.CellComment;
                 if (null != sourceCell.Hyperlink) targetCell.Hyperlink = sourceCell.Hyperlink;
+                var cfrs = sourceCell.GetConditionalFormattingRules();  //复制条件样式
+                if (null != cfrs && cfrs.Length > 0)
+                {
+                    targetCell.AddConditionalFormattingRules(cfrs);
+                }
                 targetCell.SetCellType(sourceCell.CellType);
                 #region 复制值
                 switch (sourceCell.CellType)

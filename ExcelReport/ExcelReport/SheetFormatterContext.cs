@@ -54,7 +54,7 @@ namespace ExcelReport
             return rowIndexInTemplate + _increaseRowsCount;
         }
 
-       
+   
         /// 在指定行后插入一行（并将指定行作为模板复制样式）
         /// <param name="templateRowIndex">模板行在模板中的行标</param>
         public void InsertEmptyRow(int templateRowIndex)
@@ -69,7 +69,13 @@ namespace ExcelReport
             newRow.Height = templateRow.Height;
             foreach (var cell in templateRow.Cells)
             {
-                newRow.CreateCell(cell.ColumnIndex).CellStyle = cell.CellStyle;
+                var newCell = newRow.CreateCell(cell.ColumnIndex);
+                if (null != cell.CellStyle) newCell.CellStyle = cell.CellStyle;
+                var cfrs = cell.GetConditionalFormattingRules();  //复制条件样式
+                if (null != cfrs && cfrs.Length > 0)
+                {
+                    newCell.AddConditionalFormattingRules(cfrs);
+                }
             }
             //获取模板行内的合并区域
             var regionInfoList = Sheet.GetAllMergedRegionInfos(GetCurrentRowIndex(templateRowIndex), GetCurrentRowIndex(templateRowIndex), null, null);
@@ -83,35 +89,6 @@ namespace ExcelReport
             _increaseRowsCount++;
         }
 
-        
-        /// 清除指定行单元格内容
-        /// <param name="rowIndex">指定行在模板中的行标</param>
-        public void ClearRowContent(int rowIndex)
-        {
-            var row = Sheet.GetRow(GetCurrentRowIndex(rowIndex));
-            foreach (var cell in row.Cells)
-            {
-                cell.SetCellValue(string.Empty);
-            }
-        }
-
-        /// 删除指定行
-        /// <param name="rowIndex">指定行在模板中的行标</param>
-        public void RemoveRow(int rowIndex)
-        {
-            var row = Sheet.GetRow(GetCurrentRowIndex(rowIndex));
-            Sheet.RemoveRow(row);
-        }
-        /// 删除指定行
-        /// <param name="startRowIndex">开始行在模板中的行标</param>
-        /// <param name="endRowIndex">结束行在模板中的行标</param>
-        public void RemoveRows(int startRowIndex,int endRowIndex)
-        {
-            for (int i = startRowIndex; i <= endRowIndex; i++)
-            {
-                RemoveRow(i);
-            }
-        }
 
         /// 复制模板行
         /// <param name="templateStartRowIndex"></param>
@@ -148,6 +125,37 @@ namespace ExcelReport
                 Sheet.AddPicture(picInfo);
             }
             _increaseRowsCount += span;
+        }
+
+
+        /// 清除指定行单元格内容
+        /// <param name="rowIndex">指定行在模板中的行标</param>
+        public void ClearRowContent(int rowIndex)
+        {
+            var row = Sheet.GetRow(GetCurrentRowIndex(rowIndex));
+            foreach (var cell in row.Cells)
+            {
+                cell.SetCellValue(string.Empty);
+            }
+        }
+
+        /// 删除指定行
+        /// <param name="rowIndex">指定行在模板中的行标</param>
+        public void RemoveRow(int rowIndex)
+        {
+            var row = Sheet.GetRow(GetCurrentRowIndex(rowIndex));
+            Sheet.RemoveRow(row);
+        }
+
+        /// 删除指定行
+        /// <param name="startRowIndex">开始行在模板中的行标</param>
+        /// <param name="endRowIndex">结束行在模板中的行标</param>
+        public void RemoveRows(int startRowIndex, int endRowIndex)
+        {
+            for (int i = startRowIndex; i <= endRowIndex; i++)
+            {
+                RemoveRow(i);
+            }
         }
 
         /// 格式化Sheet

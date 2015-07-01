@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ExcelReport">
-      <HintPath>..\..\ExcelReport\ExcelReport\bin\Debug\ExcelReport.dll</HintPath>
+      <HintPath>..\..\Bin\ExcelReport\ExcelReport.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\..\ExcelReport\ExcelReport\bin\Debug\ICSharpCode.SharpZipLib.dll</HintPath>

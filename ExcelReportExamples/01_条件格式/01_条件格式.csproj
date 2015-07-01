@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3C6697C8-E6C0-4732-BCC0-C4E6D9F63C7C}</ProjectGuid>
+    <ProjectGuid>{C6D8AB56-3240-4224-B087-10B2E279BB1C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_04_重复单元格式化器</RootNamespace>
-    <AssemblyName>04_重复单元格式化器</AssemblyName>
+    <RootNamespace>_01_条件格式</RootNamespace>
+    <AssemblyName>01_条件格式</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -39,19 +39,19 @@
       <HintPath>..\..\Bin\ExcelReport\ExcelReport.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>..\..\ExcelReport\ExcelReport\bin\Debug\ICSharpCode.SharpZipLib.dll</HintPath>
+      <HintPath>..\..\Bin\ExcelReport\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="NPOI">
-      <HintPath>..\..\ExcelReport\ExcelReport\bin\Debug\NPOI.dll</HintPath>
+      <HintPath>..\..\Bin\ExcelReport\NPOI.dll</HintPath>
     </Reference>
     <Reference Include="NPOI.OOXML">
-      <HintPath>..\..\ExcelReport\ExcelReport\bin\Debug\NPOI.OOXML.dll</HintPath>
+      <HintPath>..\..\Bin\ExcelReport\NPOI.OOXML.dll</HintPath>
     </Reference>
     <Reference Include="NPOI.OpenXml4Net">
-      <HintPath>..\..\ExcelReport\ExcelReport\bin\Debug\NPOI.OpenXml4Net.dll</HintPath>
+      <HintPath>..\..\Bin\ExcelReport\NPOI.OpenXml4Net.dll</HintPath>
     </Reference>
     <Reference Include="NPOI.OpenXmlFormats">
-      <HintPath>..\..\ExcelReport\ExcelReport\bin\Debug\NPOI.OpenXmlFormats.dll</HintPath>
+      <HintPath>..\..\Bin\ExcelReport\NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

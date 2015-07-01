@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("ExcelReport")]
-[assembly: AssemblyDescription("This reporting engine is built on NPOI.")]
+[assembly: AssemblyTitle("01_条件格式")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("ExcelReport Team")]
-[assembly: AssemblyProduct("ExcelReport")]
-[assembly: AssemblyCopyright("Copyright © Jensen 2015")]
+[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyProduct("01_条件格式")]
+[assembly: AssemblyCopyright("Copyright © Microsoft 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("135c0827-3159-4085-9c96-33a038e98ba7")]
+[assembly: Guid("bea32f0d-3361-4158-9551-8ce3fd534188")]
 
 // 程序集的版本信息由下面四个值组成:
 //
@@ -31,6 +31,6 @@ using System.Runtime.InteropServices;
 //
 // 可以指定所有这些值，也可以使用“内部版本号”和“修订号”的默认值，
 // 方法是按如下所示使用“*”:
-// [assembly: AssemblyVersion("1.6.*")]
-[assembly: AssemblyVersion("1.6.0")]
-[assembly: AssemblyFileVersion("1.6.0")]
+// [assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

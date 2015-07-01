@@ -35,8 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ExcelReport">
-      <HintPath>..\..\ExcelReport\ExcelReport\bin\Debug\ExcelReport.dll</HintPath>
+    <Reference Include="ExcelReport, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin\ExcelReport\ExcelReport.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\..\ExcelReport\ExcelReport\bin\Debug\ICSharpCode.SharpZipLib.dll</HintPath>
