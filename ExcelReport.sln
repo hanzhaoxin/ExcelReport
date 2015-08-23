@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReport", "src\ExcelReport\ExcelReport.csproj", "{3D162E82-EC4D-4083-841E-9533BEA6E5B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2D0FE07F-517A-4D31-AD08-A8D44E523B40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{16F3F6EB-CC2A-476D-A797-4CDD9BEC43E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlGenerator", "tools\XmlGenerator\XmlGenerator.csproj", "{756E20FA-CBD0-438F-9398-296720236883}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{6FFB78D4-76DF-4C6A-8833-FBF0F661BA6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D162E82-EC4D-4083-841E-9533BEA6E5B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D162E82-EC4D-4083-841E-9533BEA6E5B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D162E82-EC4D-4083-841E-9533BEA6E5B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D162E82-EC4D-4083-841E-9533BEA6E5B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{756E20FA-CBD0-438F-9398-296720236883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{756E20FA-CBD0-438F-9398-296720236883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{756E20FA-CBD0-438F-9398-296720236883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{756E20FA-CBD0-438F-9398-296720236883}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D162E82-EC4D-4083-841E-9533BEA6E5B0} = {2D0FE07F-517A-4D31-AD08-A8D44E523B40}
+		{756E20FA-CBD0-438F-9398-296720236883} = {16F3F6EB-CC2A-476D-A797-4CDD9BEC43E1}
+	EndGlobalSection
+EndGlobal
