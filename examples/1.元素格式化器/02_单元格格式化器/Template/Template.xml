@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<ArrayOfSheetParameterContainer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SheetParameterContainer>
+    <SheetName>单元格格式化器</SheetName>
+    <ParameterList>
+      <Parameter>
+        <Name>String</Name>
+        <RowIndex>3</RowIndex>
+        <ColumnIndex>2</ColumnIndex>
+      </Parameter>
+      <Parameter>
+        <Name>DateTime</Name>
+        <RowIndex>3</RowIndex>
+        <ColumnIndex>3</ColumnIndex>
+      </Parameter>
+      <Parameter>
+        <Name>Boolean</Name>
+        <RowIndex>3</RowIndex>
+        <ColumnIndex>4</ColumnIndex>
+      </Parameter>
+      <Parameter>
+        <Name>Double</Name>
+        <RowIndex>3</RowIndex>
+        <ColumnIndex>5</ColumnIndex>
+      </Parameter>
+      <Parameter>
+        <Name>Image</Name>
+        <RowIndex>3</RowIndex>
+        <ColumnIndex>6</ColumnIndex>
+      </Parameter>
+    </ParameterList>
+  </SheetParameterContainer>
+</ArrayOfSheetParameterContainer>

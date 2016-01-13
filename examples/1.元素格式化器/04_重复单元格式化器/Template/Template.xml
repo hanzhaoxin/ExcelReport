@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<ArrayOfSheetParameterContainer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SheetParameterContainer>
+    <SheetName>重复单元格式化器</SheetName>
+    <ParameterList>
+      <Parameter>
+        <Name>rptStudentInfo_Start</Name>
+        <RowIndex>0</RowIndex>
+        <ColumnIndex>0</ColumnIndex>
+      </Parameter>
+      <Parameter>
+        <Name>Name</Name>
+        <RowIndex>2</RowIndex>
+        <ColumnIndex>1</ColumnIndex>
+      </Parameter>
+      <Parameter>
+        <Name>Gender</Name>
+        <RowIndex>2</RowIndex>
+        <ColumnIndex>3</ColumnIndex>
+      </Parameter>
+      <Parameter>
+        <Name>RecordNo</Name>
+        <RowIndex>3</RowIndex>
+        <ColumnIndex>1</ColumnIndex>
+      </Parameter>
+      <Parameter>
+        <Name>Class</Name>
+        <RowIndex>4</RowIndex>
+        <ColumnIndex>1</ColumnIndex>
+      </Parameter>
+      <Parameter>
+        <Name>Phone</Name>
+        <RowIndex>5</RowIndex>
+        <ColumnIndex>1</ColumnIndex>
+      </Parameter>
+      <Parameter>
+        <Name>Email</Name>
+        <RowIndex>6</RowIndex>
+        <ColumnIndex>1</ColumnIndex>
+      </Parameter>
+      <Parameter>
+        <Name>rptStudentInfo_End</Name>
+        <RowIndex>7</RowIndex>
+        <ColumnIndex>0</ColumnIndex>
+      </Parameter>
+    </ParameterList>
+  </SheetParameterContainer>
+  <SheetParameterContainer>
+    <SheetName>Sheet2</SheetName>
+    <ParameterList />
+  </SheetParameterContainer>
+  <SheetParameterContainer>
+    <SheetName>Sheet3</SheetName>
+    <ParameterList />
+  </SheetParameterContainer>
+</ArrayOfSheetParameterContainer>

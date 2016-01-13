@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ArrayOfSheetParameterContainer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SheetParameterContainer>
+    <SheetName>局部格式化器</SheetName>
+    <ParameterList>
+      <Parameter>
+        <Name>UserName</Name>
+        <RowIndex>3</RowIndex>
+        <ColumnIndex>2</ColumnIndex>
+      </Parameter>
+      <Parameter>
+        <Name>GroupNo</Name>
+        <RowIndex>3</RowIndex>
+        <ColumnIndex>2</ColumnIndex>
+      </Parameter>
+    </ParameterList>
+  </SheetParameterContainer>
+</ArrayOfSheetParameterContainer>
