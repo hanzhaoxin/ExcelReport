@@ -35,17 +35,20 @@ namespace ExcelReport
         /// <param name="sheetAdapter">Sheet适配器</param>
         public override void Format(SheetAdapter sheetAdapter)
         {
-            IRow row = sheetAdapter.GetRow(Parameter.RowIndex);
-            if (null == row)
+            foreach (var cellPoint in Parameter.CellPointList)
             {
-                throw new ExcelReportFormatException("row is null");
+                IRow row = sheetAdapter.GetRow(cellPoint.RowIndex);
+                if (null == row)
+                {
+                    throw new ExcelReportFormatException("row is null");
+                }
+                ICell cell = row.GetCell(cellPoint.ColumnIndex);
+                if (null == cell)
+                {
+                    throw new ExcelReportFormatException("cell is null");
+                }
+                cell.SetValue(Value);
             }
-            ICell cell = row.GetCell(Parameter.ColumnIndex);
-            if (null == cell)
-            {
-                throw new ExcelReportFormatException("cell is null");
-            }
-            cell.SetValue(Value);
         }
         #endregion
     }
@@ -72,17 +75,20 @@ namespace ExcelReport
         /// <param name="dataSource">数据源</param>
         public override void Format(SheetAdapter sheetAdapter, TSource dataSource)
         {
-            IRow row = sheetAdapter.GetRow(Parameter.RowIndex);
-            if (null == row)
+            foreach(var cellPoint in Parameter.CellPointList)
             {
-                throw new ExcelReportFormatException("row is null");
+                IRow row = sheetAdapter.GetRow(cellPoint.RowIndex);
+                if (null == row)
+                {
+                    throw new ExcelReportFormatException("row is null");
+                }
+                ICell cell = row.GetCell(cellPoint.ColumnIndex);
+                if (null == cell)
+                {
+                    throw new ExcelReportFormatException("cell is null");
+                }
+                cell.SetValue(DgSetValue(dataSource));
             }
-            ICell cell = row.GetCell(Parameter.ColumnIndex);
-            if (null == cell)
-            {
-                throw new ExcelReportFormatException("cell is null");
-            }
-            cell.SetValue(DgSetValue(dataSource));
         }
         #endregion
     }

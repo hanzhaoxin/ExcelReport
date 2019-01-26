@@ -46,7 +46,7 @@ namespace ExcelReport
             }
             if (DataSource.IsNullOrEmpty())
             {
-                sheetAdapter.RemoveRows(StartTagParameter.RowIndex, EndTagParameter.RowIndex); //删除模板行
+                sheetAdapter.RemoveRows(StartTagParameter.TagRowIndex, EndTagParameter.TagRowIndex); //删除模板行
             }
             else
             {
@@ -54,24 +54,24 @@ namespace ExcelReport
                 {
                     if (i < DataSource.Count - 1) //非最后一行数据时，复制模板
                     {
-                        sheetAdapter.CopyRows(StartTagParameter.RowIndex, EndTagParameter.RowIndex, () =>
+                        sheetAdapter.CopyRows(StartTagParameter.TagRowIndex, EndTagParameter.TagRowIndex, () =>
                         {
-                            sheetAdapter.RemoveRow(StartTagParameter.RowIndex);
+                            sheetAdapter.RemoveRow(StartTagParameter.TagRowIndex);
                             foreach (var formatter in FormatterList) //格式化行
                             {
                                 formatter.Format(sheetAdapter, DataSource[i]);
                             }
-                            sheetAdapter.RemoveRow(EndTagParameter.RowIndex);
+                            sheetAdapter.RemoveRow(EndTagParameter.TagRowIndex);
                         });
                     }
                     else
                     {
-                        sheetAdapter.RemoveRow(StartTagParameter.RowIndex);
+                        sheetAdapter.RemoveRow(StartTagParameter.TagRowIndex);
                         foreach (var formatter in FormatterList) //格式化行
                         {
                             formatter.Format(sheetAdapter, DataSource[i]);
                         }
-                        sheetAdapter.RemoveRow(EndTagParameter.RowIndex);
+                        sheetAdapter.RemoveRow(EndTagParameter.TagRowIndex);
                     }
 
                 }
@@ -135,7 +135,7 @@ namespace ExcelReport
             var thisDataSource = DgSetThisDataSource(dataSource).ToList();
             if (thisDataSource.IsNullOrEmpty())
             {
-                sheetAdapter.RemoveRows(StartTagParameter.RowIndex, EndTagParameter.RowIndex); //删除模板行
+                sheetAdapter.RemoveRows(StartTagParameter.TagRowIndex, EndTagParameter.TagRowIndex); //删除模板行
             }
             else
             {
@@ -143,24 +143,24 @@ namespace ExcelReport
                 {
                     if (i < thisDataSource.Count - 1) //非最后一行数据时，复制模板
                     {
-                        sheetAdapter.CopyRows(StartTagParameter.RowIndex, EndTagParameter.RowIndex, () =>
+                        sheetAdapter.CopyRows(StartTagParameter.TagRowIndex, EndTagParameter.TagRowIndex, () =>
                         {
-                            sheetAdapter.RemoveRow(StartTagParameter.RowIndex);
+                            sheetAdapter.RemoveRow(StartTagParameter.TagRowIndex);
                             foreach (var formatter in FormatterList) //格式化行
                             {
                                 formatter.Format(sheetAdapter, thisDataSource[i]);
                             }
-                            sheetAdapter.RemoveRow(EndTagParameter.RowIndex);
+                            sheetAdapter.RemoveRow(EndTagParameter.TagRowIndex);
                         });
                     }
                     else
                     {
-                        sheetAdapter.RemoveRow(StartTagParameter.RowIndex);
+                        sheetAdapter.RemoveRow(StartTagParameter.TagRowIndex);
                         foreach (var formatter in FormatterList) //格式化行
                         {
                             formatter.Format(sheetAdapter, thisDataSource[i]);
                         }
-                        sheetAdapter.RemoveRow(EndTagParameter.RowIndex);
+                        sheetAdapter.RemoveRow(EndTagParameter.TagRowIndex);
                     }
                 }
             }

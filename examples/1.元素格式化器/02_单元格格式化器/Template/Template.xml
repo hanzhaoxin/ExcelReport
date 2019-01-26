@@ -5,28 +5,60 @@
     <ParameterList>
       <Parameter>
         <Name>String</Name>
-        <RowIndex>3</RowIndex>
-        <ColumnIndex>2</ColumnIndex>
+        <CellPointList>
+          <CellPoint>
+            <RowIndex>3</RowIndex>
+            <ColumnIndex>2</ColumnIndex>
+          </CellPoint>
+          <CellPoint>
+            <RowIndex>15</RowIndex>
+            <ColumnIndex>6</ColumnIndex>
+          </CellPoint>
+          <CellPoint>
+            <RowIndex>15</RowIndex>
+            <ColumnIndex>7</ColumnIndex>
+          </CellPoint>
+          <CellPoint>
+            <RowIndex>15</RowIndex>
+            <ColumnIndex>8</ColumnIndex>
+          </CellPoint>
+        </CellPointList>
       </Parameter>
       <Parameter>
         <Name>DateTime</Name>
-        <RowIndex>3</RowIndex>
-        <ColumnIndex>3</ColumnIndex>
+        <CellPointList>
+          <CellPoint>
+            <RowIndex>3</RowIndex>
+            <ColumnIndex>3</ColumnIndex>
+          </CellPoint>
+        </CellPointList>
       </Parameter>
       <Parameter>
         <Name>Boolean</Name>
-        <RowIndex>3</RowIndex>
-        <ColumnIndex>4</ColumnIndex>
+        <CellPointList>
+          <CellPoint>
+            <RowIndex>3</RowIndex>
+            <ColumnIndex>4</ColumnIndex>
+          </CellPoint>
+        </CellPointList>
       </Parameter>
       <Parameter>
         <Name>Double</Name>
-        <RowIndex>3</RowIndex>
-        <ColumnIndex>5</ColumnIndex>
+        <CellPointList>
+          <CellPoint>
+            <RowIndex>3</RowIndex>
+            <ColumnIndex>5</ColumnIndex>
+          </CellPoint>
+        </CellPointList>
       </Parameter>
       <Parameter>
         <Name>Image</Name>
-        <RowIndex>3</RowIndex>
-        <ColumnIndex>6</ColumnIndex>
+        <CellPointList>
+          <CellPoint>
+            <RowIndex>3</RowIndex>
+            <ColumnIndex>6</ColumnIndex>
+          </CellPoint>
+        </CellPointList>
       </Parameter>
     </ParameterList>
   </SheetParameterContainer>

@@ -85,15 +85,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Template\Template.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\..\src\ExcelReport\ExcelReport.csproj">
       <Project>{3d162e82-ec4d-4083-841e-9533bea6e5b0}</Project>
       <Name>ExcelReport</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Template\Template.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

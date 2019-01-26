@@ -78,6 +78,7 @@
     <Compile Include="Formatters\Simple\SimpleFormatter.cs" />
     <Compile Include="Others\Accumulation.cs" />
     <Compile Include="Others\RowIndexAccumulation.cs" />
+    <Compile Include="Parameter\CellPoint.cs" />
     <Compile Include="Parameter\Parameter.cs" />
     <Compile Include="Parameter\SheetParameterContainer.cs" />
     <Compile Include="Parameter\WorkbookParameterContainer.cs" />

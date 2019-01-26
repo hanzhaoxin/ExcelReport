@@ -47,7 +47,7 @@ namespace ExcelReport
             }
             if (DataSource.IsNullOrEmpty())
             {
-                sheetAdapter.RemoveRow(TagParameter.RowIndex); //删除模板行
+                sheetAdapter.RemoveRow(TagParameter.TagRowIndex); //删除模板行
             }
             else
             {
@@ -55,7 +55,7 @@ namespace ExcelReport
                 {
                     if (i < DataSource.Count - 1) //非最后一行数据时，复制模板
                     {
-                        sheetAdapter.CopyRow(TagParameter.RowIndex, () =>
+                        sheetAdapter.CopyRow(TagParameter.TagRowIndex, () =>
                         {
                             foreach (var formatter in FormatterList) //格式化行
                             {
@@ -126,7 +126,7 @@ namespace ExcelReport
             var thisDataSource = DgSetThisDataSource(dataSource).CastTo<List<TThisSource>>();
             if (thisDataSource.IsNullOrEmpty())
             {
-                sheetAdapter.RemoveRow(TagParameter.RowIndex); //删除模板行
+                sheetAdapter.RemoveRow(TagParameter.TagRowIndex); //删除模板行
             }
             else
             {
@@ -134,7 +134,7 @@ namespace ExcelReport
                 {
                     if (i < thisDataSource.Count - 1) //非最后一行数据时，复制模板
                     {
-                        sheetAdapter.CopyRow(TagParameter.RowIndex, () =>
+                        sheetAdapter.CopyRow(TagParameter.TagRowIndex, () =>
                         {
                             foreach (var formatter in FormatterList) //格式化行
                             {

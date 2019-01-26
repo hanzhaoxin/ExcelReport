@@ -7,12 +7,36 @@
 
 */
 
+using ExcelReport.Exceptions;
+using System.Collections.Generic;
+
 namespace ExcelReport
 {
     public class Parameter
     {
+        private List<CellPoint> _cellPointList = new List<CellPoint>();
+
         public string Name { set; get; }
-        public int RowIndex { set; get; }
-        public int ColumnIndex { set; get; }
+        
+        public List<CellPoint> CellPointList
+        {
+            get
+            {
+                return _cellPointList;
+            }
+        }
+        public int TagRowIndex
+        {
+            get
+            {
+                if (_cellPointList.IsNullOrEmpty())
+                {
+                    throw new ExcelReportTemplateException("parameter is not exists");
+                }
+
+                return _cellPointList[0].RowIndex;
+            }
+        }
+
     }
 }

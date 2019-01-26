@@ -38,24 +38,11 @@ namespace ExcelReport
                         return parameter;
                     }
                 }
-                throw new ExcelReportTemplateException("parameter is not exists");
+                return null;
             }
             set
             {
-                bool isExist = false;
-                foreach (Parameter parameter in _parameterList)
-                {
-                    if (parameter.Name.Equals(name))
-                    {
-                        isExist = true;
-                        parameter.RowIndex = value.RowIndex;
-                        parameter.ColumnIndex = value.ColumnIndex;
-                    }
-                }
-                if (!isExist)
-                {
-                    _parameterList.Add(value);
-                }
+                _parameterList.Add(value);
             }
         }
     }

@@ -25,6 +25,7 @@ namespace _03_表格格式化器
                 int num = 0;
                 ExportHelper.ExportToLocal(@"Template\Template.xls", saveFileDlg.FileName,
                     new SheetFormatter("表格格式化器",
+                        new PartFormatter(sheetParameterContainer["Author"],"hzx"),
                         new TableFormatter<StudentInfo>(sheetParameterContainer["No"], StudentLogic.GetList(),
                             new CellFormatter<StudentInfo>(sheetParameterContainer["No"], t => num++),
                             new CellFormatter<StudentInfo>(sheetParameterContainer["Name"], t => t.Name),

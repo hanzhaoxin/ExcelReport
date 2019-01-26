@@ -34,12 +34,17 @@ namespace XmlGenerator
                             MatchCollection matches = new Regex(@"(?<=\$\[)([\w]*)(?=\])").Matches(cell.StringCellValue);
                             foreach (Match match in matches)
                             {
-                                workbookParameterContainer[sheet.SheetName][match.Value] = new Parameter
+                                var parameter = workbookParameterContainer[sheet.SheetName][match.Value];
+                                if (parameter.IsNull())
                                 {
-                                    Name = match.Value,
+                                    parameter = new Parameter();
+                                    parameter.Name = match.Value;
+                                    workbookParameterContainer[sheet.SheetName][match.Value] = parameter;
+                                }
+                                parameter.CellPointList.Add(new CellPoint {
                                     RowIndex = cell.RowIndex,
                                     ColumnIndex = cell.ColumnIndex
-                                };
+                                });
                             }
                         }
                     }
