@@ -1,99 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3D162E82-EC4D-4083-841E-9533BEA6E5B0}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExcelReport</RootNamespace>
-    <AssemblyName>ExcelReport</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>3.0.0</Version>
+    <Description>This reporting engine is built on NPOI.</Description>
+    <Copyright>Copyright 2015</Copyright>
+    <PackageLicenseUrl>https://github.com/hanzhaoxin/ExcelReport/blob/master/License.txt</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/hanzhaoxin/ExcelReport</PackageProjectUrl>
+    <PackageIconUrl>http://images.cnblogs.com/cnblogs_com/hanzhaoxin/638238/o_ExcelReport.png</PackageIconUrl>
+    <PackageReleaseNotes>Commit ExcelReport_v3.0.0.
+</PackageReleaseNotes>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NPOI.2.4.1\lib\net40\NPOI.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI.Extend, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NPOI.Extend.1.0.4\lib\net40\NPOI.Extend.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI.OOXML, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NPOI.2.4.1\lib\net40\NPOI.OOXML.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI.OpenXml4Net, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NPOI.2.4.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI.OpenXmlFormats, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NPOI.2.4.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <PackageReference Include="NPOI" Version="2.4.1" />
+    <PackageReference Include="NPOI.Extend" Version="1.0.5" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Exceptions\ExcelReportException.cs" />
-    <Compile Include="Exceptions\ExcelReportFormatException.cs" />
-    <Compile Include="Exceptions\ExcelReportTemplateException.cs" />
-    <Compile Include="Export.cs" />
-    <Compile Include="ExportHelper.cs" />
-    <Compile Include="Extend\EnumerableExtend.cs" />
-    <Compile Include="Extend\ImageExtend.cs" />
-    <Compile Include="Extend\ObjectExtend.cs" />
-    <Compile Include="Extend\TypeExtend.cs" />
-    <Compile Include="Formatters\Complex\ComplexFormatter.cs" />
-    <Compile Include="Formatters\Complex\RepeaterFormatter.cs" />
-    <Compile Include="Formatters\Complex\TableFormatter.cs" />
-    <Compile Include="Formatters\ElementFormatter.cs" />
-    <Compile Include="Formatters\EmbeddedFormatter.cs" />
-    <Compile Include="Formatters\Simple\CellFormatter.cs" />
-    <Compile Include="Formatters\Simple\PartFormatter.cs" />
-    <Compile Include="Formatters\Simple\SimpleFormatter.cs" />
-    <Compile Include="Others\Accumulation.cs" />
-    <Compile Include="Others\RowIndexAccumulation.cs" />
-    <Compile Include="Parameter\Parameter.cs" />
-    <Compile Include="Parameter\SheetParameterContainer.cs" />
-    <Compile Include="Parameter\WorkbookParameterContainer.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SheetAdapter.cs" />
-    <Compile Include="SheetFormatter.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>
