@@ -1,4 +1,6 @@
-﻿using NPOI.Extend;
+﻿using ExcelReport.Contexts;
+using ExcelReport.Renderers;
+using NPOI.Extend;
 using NPOI.SS.UserModel;
 
 namespace ExcelReport
@@ -8,10 +10,10 @@ namespace ExcelReport
         public static byte[] ExportToBuffer(string templateFile, params SheetRenderer[] sheetRenderers)
         {
             IWorkbook workbook = NPOIHelper.LoadWorkbook(templateFile);
-            var workbookAdapter = new WorkbookAdapter(workbook);
+            var workbookContext = new WorkbookContext(workbook);
             foreach (SheetRenderer sheetRenderer in sheetRenderers)
             {
-                sheetRenderer.Render(workbookAdapter);
+                sheetRenderer.Render(workbookContext);
             }
             return workbook.SaveToBuffer();
         }

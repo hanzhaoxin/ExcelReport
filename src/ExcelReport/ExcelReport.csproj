@@ -13,6 +13,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ExcelReport.3.0.0.nupkg" />
+    <None Remove="ExcelReport.nuspec" />
+    <None Remove="第一步.bat" />
+    <None Remove="第三步.bat" />
+    <None Remove="第二步.bat" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="NPOI" Version="2.4.1" />
     <PackageReference Include="NPOI.Extend" Version="1.0.5" />
   </ItemGroup>

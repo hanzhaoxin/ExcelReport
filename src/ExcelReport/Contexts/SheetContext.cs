@@ -5,9 +5,9 @@ using NPOI.Extend;
 using NPOI.SS.UserModel;
 using System;
 
-namespace ExcelReport
+namespace ExcelReport.Contexts
 {
-    public sealed class SheetAdapter
+    public sealed class SheetContext
     {
         private readonly RowIndexAccumulation _rowIndexAccumulation = new RowIndexAccumulation();
         private readonly ISheet _sheet;
@@ -19,7 +19,7 @@ namespace ExcelReport
             return _sheet.IsNull();
         }
 
-        public SheetAdapter(ISheet sheet, SheetContainer worksheetContainer)
+        public SheetContext(ISheet sheet, SheetContainer worksheetContainer)
         {
             _sheet = sheet;
             WorksheetContainer = worksheetContainer;

@@ -1,4 +1,5 @@
-﻿using ExcelReport.Exceptions;
+﻿using ExcelReport.Contexts;
+using ExcelReport.Exceptions;
 using ExcelReport.Extends;
 using ExcelReport.Meta;
 using System;
@@ -19,9 +20,9 @@ namespace ExcelReport.Renderers
             RendererList = new List<IEmbeddedRenderer<TItem>>(renderers);
         }
 
-        public void Render(SheetAdapter sheetAdapter)
+        public void Render(SheetContext sheetContext)
         {
-            Repeater repeater = sheetAdapter.WorksheetContainer.Repeaters[Name];
+            Repeater repeater = sheetContext.WorksheetContainer.Repeaters[Name];
             if (RendererList.IsNullOrEmpty())
             {
                 throw new ExcelReportRenderException($"RepeaterRenderer[{repeater.Name}] is empty");
@@ -29,15 +30,15 @@ namespace ExcelReport.Renderers
 
             foreach (var item in DataSource)
             {
-                sheetAdapter.CopyRepeaterTemplate(repeater, () =>
+                sheetContext.CopyRepeaterTemplate(repeater, () =>
                 {
                     foreach (var renderer in RendererList)
                     {
-                        renderer.Render(sheetAdapter, item);
+                        renderer.Render(sheetContext, item);
                     }
                 });
             }
-            sheetAdapter.RemoveRepeaterTemplate(repeater);
+            sheetContext.RemoveRepeaterTemplate(repeater);
         }
 
         public void Append(IEmbeddedRenderer<TItem> renderer)
@@ -59,9 +60,9 @@ namespace ExcelReport.Renderers
             RendererList = new List<IEmbeddedRenderer<TItem>>(renderers);
         }
 
-        public void Render(SheetAdapter sheetAdapter, TSource dataSource)
+        public void Render(SheetContext sheetContext, TSource dataSource)
         {
-            Repeater repeater = sheetAdapter.WorksheetContainer.Repeaters[Name];
+            Repeater repeater = sheetContext.WorksheetContainer.Repeaters[Name];
             if (RendererList.IsNullOrEmpty())
             {
                 throw new ExcelReportRenderException($"RepeaterRenderer[{repeater.Name}] is empty");
@@ -69,15 +70,15 @@ namespace ExcelReport.Renderers
 
             foreach (var item in DgSetDataSource(dataSource))
             {
-                sheetAdapter.CopyRepeaterTemplate(repeater, () =>
+                sheetContext.CopyRepeaterTemplate(repeater, () =>
                 {
                     foreach (var renderer in RendererList)
                     {
-                        renderer.Render(sheetAdapter, item);
+                        renderer.Render(sheetContext, item);
                     }
                 });
             }
-            sheetAdapter.RemoveRepeaterTemplate(repeater);
+            sheetContext.RemoveRepeaterTemplate(repeater);
         }
 
         public void Append(IEmbeddedRenderer<TItem> renderer)

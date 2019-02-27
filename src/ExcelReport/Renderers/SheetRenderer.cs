@@ -1,9 +1,10 @@
-﻿using ExcelReport.Extends;
+﻿using ExcelReport.Contexts;
+using ExcelReport.Extends;
 using ExcelReport.Meta;
 using ExcelReport.Renderers;
 using System.Collections.Generic;
 
-namespace ExcelReport
+namespace ExcelReport.Renderers
 {
     public sealed class SheetRenderer : Named
     {
@@ -15,16 +16,16 @@ namespace ExcelReport
             RendererList = new List<IElementRenderer>(elementRenderers);
         }
 
-        public void Render(WorkbookAdapter workbookAdapter)
+        public void Render(WorkbookContext workbookContext)
         {
-            var worksheetAdapter = workbookAdapter[Name];
-            if (worksheetAdapter.IsNull() || worksheetAdapter.IsEmpty())
+            var worksheetContext = workbookContext[Name];
+            if (worksheetContext.IsNull() || worksheetContext.IsEmpty())
             {
                 return;
             }
             foreach (var renderer in RendererList)
             {
-                renderer.Render(worksheetAdapter);
+                renderer.Render(worksheetContext);
             }
         }
     }

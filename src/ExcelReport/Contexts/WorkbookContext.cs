@@ -2,28 +2,28 @@
 using ExcelReport.Parsers;
 using NPOI.SS.UserModel;
 
-namespace ExcelReport
+namespace ExcelReport.Contexts
 {
-    public sealed class WorkbookAdapter
+    public sealed class WorkbookContext
     {
         private static readonly TemplateParser TEMPLATE_PARSER = new TemplateParser();
         private readonly IWorkbook _workbook;
 
         private readonly WorkbookContainer _workbookContainer;
 
-        public WorkbookAdapter(IWorkbook workbook)
+        public WorkbookContext(IWorkbook workbook)
         {
             _workbook = workbook;
             _workbookContainer = TEMPLATE_PARSER.Parse(workbook);
         }
 
-        public SheetAdapter this[string sheetName]
+        public SheetContext this[string sheetName]
         {
             get
             {
                 var sheet = _workbook.GetSheet(sheetName);
                 var worksheetContainer = _workbookContainer.Sheets[sheetName];
-                return new SheetAdapter(sheet, worksheetContainer);
+                return new SheetContext(sheet, worksheetContainer);
             }
         }
     }

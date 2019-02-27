@@ -1,4 +1,5 @@
-﻿using ExcelReport.Exceptions;
+﻿using ExcelReport.Contexts;
+using ExcelReport.Exceptions;
 using ExcelReport.Extends;
 using ExcelReport.Meta;
 using NPOI.Extend;
@@ -17,12 +18,12 @@ namespace ExcelReport.Renderers
             Value = value;
         }
 
-        public void Render(SheetAdapter sheetAdapter)
+        public void Render(SheetContext sheetContext)
         {
-            Parameter parameter = sheetAdapter.WorksheetContainer.Parameters[Name];
+            Parameter parameter = sheetContext.WorksheetContainer.Parameters[Name];
             foreach (var location in parameter.Locations)
             {
-                ICell cell = sheetAdapter.GetCell(location);
+                ICell cell = sheetContext.GetCell(location);
                 if (null == cell)
                 {
                     throw new ExcelReportRenderException($"parameter[{parameter.Name}],cell[{location.RowIndex},{location.ColumnIndex}] is null");
@@ -50,12 +51,12 @@ namespace ExcelReport.Renderers
             DgSetValue = dgSetValue;
         }
 
-        public void Render(SheetAdapter sheetAdapter, TSource dataSource)
+        public void Render(SheetContext sheetContext, TSource dataSource)
         {
-            Parameter parameter = sheetAdapter.WorksheetContainer.Parameters[Name];
+            Parameter parameter = sheetContext.WorksheetContainer.Parameters[Name];
             foreach (var location in parameter.Locations)
             {
-                ICell cell = sheetAdapter.GetCell(location);
+                ICell cell = sheetContext.GetCell(location);
                 if (null == cell)
                 {
                     throw new ExcelReportRenderException($"parameter[{parameter.Name}],cell[{location.RowIndex},{location.ColumnIndex}] is null");

@@ -1,7 +1,9 @@
-﻿namespace ExcelReport.Renderers
+﻿using ExcelReport.Contexts;
+
+namespace ExcelReport.Renderers
 {
     public interface IElementRenderer
     {
-        void Render(SheetAdapter sheetAdapter);
+        void Render(SheetContext sheetContext);
     }
 }
