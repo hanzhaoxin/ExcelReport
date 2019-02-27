@@ -19,7 +19,8 @@ namespace _2.单行重复渲染示例
                             new ParameterRenderer<StudentInfo>("RecordNo", t => t.RecordNo),
                             new ParameterRenderer<StudentInfo>("Phone", t => t.Phone),
                             new ParameterRenderer<StudentInfo>("Email", t => t.Email)
-                            )
+                            ),
+                         new ParameterRenderer("Author", "hzx")
                         )
                     );
             Console.WriteLine("finished!");
