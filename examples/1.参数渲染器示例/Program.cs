@@ -16,7 +16,7 @@ namespace _1.参数渲染器示例
                         new ParameterRenderer("Boolean", true),
                         new ParameterRenderer("DateTime", DateTime.Now),
                         new ParameterRenderer("Double", 3.14),
-                        new ParameterRenderer("Image", Image.FromFile("Image/C#高级编程.jpg").ToBuffer())
+                        new ParameterRenderer("Image", Image.FromFile("Image/C#高级编程.jpg"))
                         )
                     );
             Console.WriteLine("finished!");

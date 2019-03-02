@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <PackageReference Include="NPOI" Version="2.4.1" />
-    <PackageReference Include="NPOI.Extend" Version="1.0.5" />
+    <PackageReference Include="NPOI.Extend" Version="1.0.8" />
   </ItemGroup>
 
 </Project>
