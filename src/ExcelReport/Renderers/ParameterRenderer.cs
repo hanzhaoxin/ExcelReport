@@ -1,9 +1,8 @@
 ﻿using ExcelReport.Contexts;
+using ExcelReport.Driver;
 using ExcelReport.Exceptions;
 using ExcelReport.Extends;
 using ExcelReport.Meta;
-using NPOI.Extend;
-using NPOI.SS.UserModel;
 using System;
 
 namespace ExcelReport.Renderers
@@ -26,16 +25,16 @@ namespace ExcelReport.Renderers
                 ICell cell = sheetContext.GetCell(location);
                 if (null == cell)
                 {
-                    throw new ExcelReportRenderException($"parameter[{parameter.Name}],cell[{location.RowIndex},{location.ColumnIndex}] is null");
+                    throw new RenderException($"parameter[{parameter.Name}],cell[{location.RowIndex},{location.ColumnIndex}] is null");
                 }
                 var parameterName = $"$[{parameter.Name}]";
-                if (parameterName.Equals(cell.StringCellValue.Trim()))
+                if (parameterName.Equals(cell.GetStringValue().Trim()))
                 {
-                    cell.SetValue(Value);
+                    cell.Value = Value;
                 }
                 else
                 {
-                    cell.SetValue(cell.StringCellValue.Replace(parameterName, Value.CastTo<string>()));
+                    cell.Value = (cell.GetStringValue().Replace(parameterName, Value.CastTo<string>()));
                 }
             }
         }
@@ -59,17 +58,17 @@ namespace ExcelReport.Renderers
                 ICell cell = sheetContext.GetCell(location);
                 if (null == cell)
                 {
-                    throw new ExcelReportRenderException($"parameter[{parameter.Name}],cell[{location.RowIndex},{location.ColumnIndex}] is null");
+                    throw new RenderException($"parameter[{parameter.Name}],cell[{location.RowIndex},{location.ColumnIndex}] is null");
                 }
 
                 var parameterName = $"$[{parameter.Name}]";
-                if (parameterName.Equals(cell.StringCellValue.Trim()))
+                if (parameterName.Equals(cell.GetStringValue().Trim()))
                 {
-                    cell.SetValue(DgSetValue(dataSource));
+                    cell.Value = DgSetValue(dataSource);
                 }
                 else
                 {
-                    cell.SetValue(cell.StringCellValue.Replace($"$[{parameter.Name}]", DgSetValue(dataSource).CastTo<string>()));
+                    cell.Value = cell.GetStringValue().Replace($"$[{parameter.Name}]", DgSetValue(dataSource).CastTo<string>());
                 }
             }
         }

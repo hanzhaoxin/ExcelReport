@@ -1,8 +1,7 @@
 ﻿using ExcelReport.Accumulations;
+using ExcelReport.Driver;
 using ExcelReport.Extends;
 using ExcelReport.Meta;
-using NPOI.Extend;
-using NPOI.SS.UserModel;
 using System;
 
 namespace ExcelReport.Contexts
@@ -29,12 +28,12 @@ namespace ExcelReport.Contexts
         {
             var rowIndex = _rowIndexAccumulation.GetCurrentRowIndex(location.RowIndex);
 
-            IRow row = _sheet.GetRow(rowIndex);
+            IRow row = _sheet[rowIndex];
             if (row.IsNull())
             {
                 return null;
             }
-            return row.GetCell(location.ColumnIndex);
+            return row[location.ColumnIndex];
         }
 
         public void CopyRepeaterTemplate(Repeater repeater, Action processTemplate)
@@ -44,10 +43,10 @@ namespace ExcelReport.Contexts
 
             int span = _sheet.CopyRows(startRowIndex, endRowIndex);
             ICell startCell = GetCell(repeater.Start);
-            startCell.SetValue(startCell.StringCellValue.Replace($"<[{repeater.Name}]", String.Empty));
+            startCell.Value = startCell.GetStringValue().Replace($"<[{repeater.Name}]", String.Empty);
             processTemplate();
             ICell endCell = GetCell(repeater.End);
-            endCell.SetValue(endCell.StringCellValue.Replace($">[{repeater.Name}]", String.Empty));
+            endCell.Value = endCell.GetStringValue().Replace($">[{repeater.Name}]", String.Empty);
             _rowIndexAccumulation.Add(span);
         }
 

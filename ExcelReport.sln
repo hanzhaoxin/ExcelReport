@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.参数渲染器示例", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.单行重复渲染示例", "examples\2.单行重复渲染示例\2.单行重复渲染示例.csproj", "{7B27958D-9D77-4FDA-B525-39E1149E27F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.多行重复渲染示例", "examples\3.多行重复渲染示例\3.多行重复渲染示例.csproj", "{85EC2205-CB4E-41DA-A2CB-BE6E93787C64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.多行重复渲染示例", "examples\3.多行重复渲染示例\3.多行重复渲染示例.csproj", "{85EC2205-CB4E-41DA-A2CB-BE6E93787C64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelReport.Driver", "src\ExcelReport.Driver\ExcelReport.Driver.csproj", "{1DE2162D-5986-4926-B0F2-75BFCAE2617F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelReport.Driver.NPOIDriver", "src\ExcelReport.Driver.NPOIDriver\ExcelReport.Driver.NPOIDriver.csproj", "{4E36D7A7-18A0-4F4F-AFD6-879501EE3EB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +41,14 @@ Global
 		{85EC2205-CB4E-41DA-A2CB-BE6E93787C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85EC2205-CB4E-41DA-A2CB-BE6E93787C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85EC2205-CB4E-41DA-A2CB-BE6E93787C64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DE2162D-5986-4926-B0F2-75BFCAE2617F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DE2162D-5986-4926-B0F2-75BFCAE2617F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DE2162D-5986-4926-B0F2-75BFCAE2617F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DE2162D-5986-4926-B0F2-75BFCAE2617F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E36D7A7-18A0-4F4F-AFD6-879501EE3EB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E36D7A7-18A0-4F4F-AFD6-879501EE3EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E36D7A7-18A0-4F4F-AFD6-879501EE3EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E36D7A7-18A0-4F4F-AFD6-879501EE3EB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +58,8 @@ Global
 		{3016476A-8D2B-4C59-B508-870A0DCEB8E1} = {319FF12B-5B28-42B6-87A6-4A31B8049281}
 		{7B27958D-9D77-4FDA-B525-39E1149E27F0} = {319FF12B-5B28-42B6-87A6-4A31B8049281}
 		{85EC2205-CB4E-41DA-A2CB-BE6E93787C64} = {319FF12B-5B28-42B6-87A6-4A31B8049281}
+		{1DE2162D-5986-4926-B0F2-75BFCAE2617F} = {D482BFE0-F981-4F4B-9F0E-0C586FA804FA}
+		{4E36D7A7-18A0-4F4F-AFD6-879501EE3EB9} = {D482BFE0-F981-4F4B-9F0E-0C586FA804FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4279AAA3-619A-4506-A58D-AAC9574061E9}

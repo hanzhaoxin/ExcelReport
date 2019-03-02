@@ -1,7 +1,7 @@
 ﻿using ExcelReport.Contexts;
+using ExcelReport.Driver;
 using ExcelReport.Renderers;
-using NPOI.Extend;
-using NPOI.SS.UserModel;
+using System.IO;
 
 namespace ExcelReport
 {
@@ -9,7 +9,9 @@ namespace ExcelReport
     {
         public static byte[] ExportToBuffer(string templateFile, params SheetRenderer[] sheetRenderers)
         {
-            IWorkbook workbook = NPOIHelper.LoadWorkbook(templateFile);
+            var str = Path.GetExtension(templateFile);
+            IWorkbookLoader workbookLoader = Configurator.Get(str);
+            IWorkbook workbook = workbookLoader.Load(templateFile);
             var workbookContext = new WorkbookContext(workbook);
             foreach (SheetRenderer sheetRenderer in sheetRenderers)
             {

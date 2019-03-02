@@ -1,6 +1,6 @@
-﻿using ExcelReport.Meta;
+﻿using ExcelReport.Driver;
+using ExcelReport.Meta;
 using ExcelReport.Parsers;
-using NPOI.SS.UserModel;
 
 namespace ExcelReport.Contexts
 {
@@ -21,7 +21,7 @@ namespace ExcelReport.Contexts
         {
             get
             {
-                var sheet = _workbook.GetSheet(sheetName);
+                var sheet = _workbook[sheetName];
                 var worksheetContainer = _workbookContainer.Sheets[sheetName];
                 return new SheetContext(sheet, worksheetContainer);
             }

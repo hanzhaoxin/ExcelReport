@@ -25,7 +25,7 @@ namespace ExcelReport.Renderers
             Repeater repeater = sheetContext.WorksheetContainer.Repeaters[Name];
             if (RendererList.IsNullOrEmpty())
             {
-                throw new ExcelReportRenderException($"RepeaterRenderer[{repeater.Name}] is empty");
+                throw new RenderException($"RepeaterRenderer[{repeater.Name}] is empty");
             }
 
             foreach (var item in DataSource)
@@ -65,7 +65,7 @@ namespace ExcelReport.Renderers
             Repeater repeater = sheetContext.WorksheetContainer.Repeaters[Name];
             if (RendererList.IsNullOrEmpty())
             {
-                throw new ExcelReportRenderException($"RepeaterRenderer[{repeater.Name}] is empty");
+                throw new RenderException($"RepeaterRenderer[{repeater.Name}] is empty");
             }
 
             foreach (var item in DgSetDataSource(dataSource))

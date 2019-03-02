@@ -1,5 +1,6 @@
-﻿using ExcelReport.Meta;
-using NPOI.SS.UserModel;
+﻿using ExcelReport.Driver;
+using ExcelReport.Extends;
+using ExcelReport.Meta;
 
 namespace ExcelReport.Parsers
 {
@@ -18,21 +19,21 @@ namespace ExcelReport.Parsers
             {
                 foreach (IRow row in sheet)
                 {
-                    foreach (ICell cell in row.Cells)
+                    foreach (ICell cell in row)
                     {
-                        if (cell.CellType.Equals(CellType.String))
+                        if (cell.Value is string)
                         {
-                            foreach (var parameterName in PARAMETER_PARSER.Parse(cell.StringCellValue))
+                            foreach (var parameterName in PARAMETER_PARSER.Parse(cell.GetStringValue()))
                             {
                                 workbookContainer.Sheets[sheet.SheetName].Parameters[parameterName].Append(new Location(cell.RowIndex, cell.ColumnIndex));
                             }
 
-                            foreach (var tagName in REPEATER_START_PARSER.Parse(cell.StringCellValue))
+                            foreach (var tagName in REPEATER_START_PARSER.Parse(cell.GetStringValue()))
                             {
                                 workbookContainer.Sheets[sheet.SheetName].Repeaters[tagName].Start = new Location(cell.RowIndex, cell.ColumnIndex);
                             }
 
-                            foreach (var tagName in REPEATER_END_PARSER.Parse(cell.StringCellValue))
+                            foreach (var tagName in REPEATER_END_PARSER.Parse(cell.GetStringValue()))
                             {
                                 workbookContainer.Sheets[sheet.SheetName].Repeaters[tagName].End = new Location(cell.RowIndex, cell.ColumnIndex);
                             }

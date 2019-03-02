@@ -1,7 +1,6 @@
 ﻿using ExcelReport.Contexts;
 using ExcelReport.Extends;
 using ExcelReport.Meta;
-using ExcelReport.Renderers;
 using System.Collections.Generic;
 
 namespace ExcelReport.Renderers

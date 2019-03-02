@@ -1,4 +1,5 @@
 ﻿using ExcelReport;
+using ExcelReport.Driver.NPOIDriver;
 using ExcelReport.Renderers;
 using System;
 
@@ -8,7 +9,11 @@ namespace _3.多行重复渲染示例
     {
         private static void Main(string[] args)
         {
-            ExportHelper.ExportToLocal(@"Template\Template.xls", "out.xls",
+            Configurator.Put(".xls", new WorkbookLoader());
+
+            try
+            {
+                ExportHelper.ExportToLocal(@"Template\Template.xls", "out.xls",
                     new SheetRenderer("多行重复渲染示例",
                         new RepeaterRenderer<StudentInfo>("rptStudentInfo", StudentLogic.GetList(),
                             new ParameterRenderer<StudentInfo>("Name", t => t.Name),
@@ -20,6 +25,12 @@ namespace _3.多行重复渲染示例
                             )
                         )
                     );
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
             Console.WriteLine("finished!");
         }
     }
