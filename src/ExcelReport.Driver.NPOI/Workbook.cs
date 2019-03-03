@@ -1,11 +1,11 @@
-﻿using ExcelReport.Driver.NPOIDriver.Extends;
+﻿using ExcelReport.Driver.NPOI.Extends;
 using NPOI.Extend;
 using System.Collections;
 using System.Collections.Generic;
 using NpoiSheet = NPOI.SS.UserModel.ISheet;
 using NpoiWorkbook = NPOI.SS.UserModel.IWorkbook;
 
-namespace ExcelReport.Driver.NPOIDriver
+namespace ExcelReport.Driver.NPOI
 {
     public class Workbook : IWorkbook
     {

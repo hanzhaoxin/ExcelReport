@@ -1,10 +1,10 @@
-﻿using ExcelReport.Driver.NPOIDriver.Extends;
+﻿using ExcelReport.Driver.NPOI.Extends;
 using System.Collections;
 using System.Collections.Generic;
 using NpoiCell = NPOI.SS.UserModel.ICell;
 using NpoiRow = NPOI.SS.UserModel.IRow;
 
-namespace ExcelReport.Driver.NPOIDriver
+namespace ExcelReport.Driver.NPOI
 {
     public class Row : IRow
     {

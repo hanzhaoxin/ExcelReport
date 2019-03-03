@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ExcelReport.Driver.NPOI.nuspec" />
     <None Remove="ExcelReport.Driver.NPOIDriver.1.0.0.nupkg" />
     <None Remove="ExcelReport.Driver.NPOIDriver.nuspec" />
     <None Remove="第一步.bat" />

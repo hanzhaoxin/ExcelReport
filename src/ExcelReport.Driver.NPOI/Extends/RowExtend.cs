@@ -1,6 +1,6 @@
 ﻿using NpoiRow = NPOI.SS.UserModel.IRow;
 
-namespace ExcelReport.Driver.NPOIDriver.Extends
+namespace ExcelReport.Driver.NPOI.Extends
 {
     internal static class RowExtend
     {

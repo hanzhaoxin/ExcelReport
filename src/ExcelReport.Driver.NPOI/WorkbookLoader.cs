@@ -1,7 +1,7 @@
-﻿using ExcelReport.Driver.NPOIDriver.Extends;
+﻿using ExcelReport.Driver.NPOI.Extends;
 using NPOI.Extend;
 
-namespace ExcelReport.Driver.NPOIDriver
+namespace ExcelReport.Driver.NPOI
 {
     public class WorkbookLoader : IWorkbookLoader
     {

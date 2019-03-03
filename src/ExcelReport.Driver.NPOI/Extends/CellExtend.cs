@@ -1,6 +1,6 @@
 ﻿using NpoiCell = NPOI.SS.UserModel.ICell;
 
-namespace ExcelReport.Driver.NPOIDriver.Extends
+namespace ExcelReport.Driver.NPOI.Extends
 {
     internal static class CellExtend
     {

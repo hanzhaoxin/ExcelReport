@@ -1,6 +1,6 @@
 ﻿using NpoiWorkbook = NPOI.SS.UserModel.IWorkbook;
 
-namespace ExcelReport.Driver.NPOIDriver.Extends
+namespace ExcelReport.Driver.NPOI.Extends
 {
     internal static class WorkbookExtend
     {

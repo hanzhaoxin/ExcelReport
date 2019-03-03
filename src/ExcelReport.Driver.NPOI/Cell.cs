@@ -1,7 +1,7 @@
 ﻿using NPOI.Extend;
 using NpoiCell = NPOI.SS.UserModel.ICell;
 
-namespace ExcelReport.Driver.NPOIDriver
+namespace ExcelReport.Driver.NPOI
 {
     public class Cell : ICell
     {

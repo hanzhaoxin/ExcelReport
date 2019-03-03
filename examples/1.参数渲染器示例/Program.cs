@@ -1,5 +1,5 @@
 ﻿using ExcelReport;
-using ExcelReport.Driver.NPOIDriver;
+using ExcelReport.Driver.NPOI;
 using ExcelReport.Renderers;
 using System;
 using System.Drawing;
