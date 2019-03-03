@@ -9,7 +9,9 @@ namespace _2.单行重复渲染示例
     {
         private static void Main(string[] args)
         {
+            // 项目启动时，添加
             Configurator.Put(".xls", new WorkbookLoader());
+
             try
             {
                 var num = 1;

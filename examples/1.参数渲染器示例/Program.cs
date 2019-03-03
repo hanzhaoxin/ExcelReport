@@ -12,6 +12,7 @@ namespace _1.参数渲染器示例
         {
             try
             {
+                // 项目启动时，添加
                 Configurator.Put(".xls", new WorkbookLoader());
 
                 ExportHelper.ExportToLocal(@"Template\Template.xls", "out.xls",
