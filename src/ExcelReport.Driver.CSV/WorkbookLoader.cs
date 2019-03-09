@@ -9,7 +9,7 @@ namespace ExcelReport.Driver.CSV
         public IWorkbook Load(string filePath)
         {
             var workbook = new Workbook();
-            var sheet = workbook[Path.GetFileName(filePath)];
+            var sheet = workbook[Path.GetFileNameWithoutExtension(filePath)];
             using (var streamReader = new StreamReader(filePath, Encoding.UTF8))
             {
                 var csvReader = new CsvReader(streamReader);
