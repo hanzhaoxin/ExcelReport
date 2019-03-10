@@ -16,5 +16,10 @@ namespace ExcelReport.Driver.CSV.Extends
             var enc = Activator.CreateInstance<TEncoding>();
             return enc.GetBytes(str);
         }
+
+        public static byte[] ToBytesBy(this string str, Encoding encoding)
+        {
+            return encoding.GetBytes(str);
+        }
     }
 }

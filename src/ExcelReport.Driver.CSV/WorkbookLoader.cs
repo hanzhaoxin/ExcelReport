@@ -1,6 +1,6 @@
 ﻿using AxinLib.IO.CSV;
+using ExcelReport.Driver.CSV.Extends;
 using System.IO;
-using System.Text;
 
 namespace ExcelReport.Driver.CSV
 {
@@ -8,10 +8,9 @@ namespace ExcelReport.Driver.CSV
     {
         public IWorkbook Load(string filePath)
         {
-            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             var workbook = new Workbook();
             var sheet = workbook[Path.GetFileNameWithoutExtension(filePath)];
-            using (var streamReader = new StreamReader(filePath, Encoding.GetEncoding("GB2312")))
+            using (var streamReader = new StreamReader(filePath, EncodingExtend.GB2312))
             {
                 var csvReader = new CsvReader(streamReader);
                 Field field;

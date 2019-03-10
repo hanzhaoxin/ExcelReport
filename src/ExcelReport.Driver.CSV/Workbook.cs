@@ -32,8 +32,7 @@ namespace ExcelReport.Driver.CSV
         {
             var builder = new StringBuilder();
             AppendTo(builder);
-            return Encoding.GetEncoding("GB2312").GetBytes(builder.ToString());
-            // return builder.ToString().ToBytesBy<UTF8Encoding>();
+            return builder.ToString().ToBytesBy(EncodingExtend.GB2312);
         }
 
         IEnumerator IEnumerable.GetEnumerator()

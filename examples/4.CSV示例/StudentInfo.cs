@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace _4.CSV示例
+﻿namespace _4.CSV示例
 {
     public class StudentInfo
     {

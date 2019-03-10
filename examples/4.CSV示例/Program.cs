@@ -5,9 +5,9 @@ using System;
 
 namespace _4.CSV示例
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // 项目启动时，添加
             Configurator.Put(".csv", new WorkbookLoader());
