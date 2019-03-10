@@ -6,8 +6,9 @@
     <Copyright>Copyright 2019</Copyright>
     <PackageLicenseUrl>https://github.com/hanzhaoxin/ExcelReport/blob/master/License.txt</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/hanzhaoxin/ExcelReport</PackageProjectUrl>
-    <PackageIconUrl>http://images.cnblogs.com/cnblogs_com/hanzhaoxin/638238/o_ExcelReport.png</PackageIconUrl>
-    <PackageReleaseNotes>添加适配层，为支持更多的底层驱动包做准备。</PackageReleaseNotes>
+    <PackageIconUrl>https://www.cnblogs.com/images/cnblogs_com/hanzhaoxin/638238/o_e-i-2.png</PackageIconUrl>
+    <PackageReleaseNotes>更新图标</PackageReleaseNotes>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

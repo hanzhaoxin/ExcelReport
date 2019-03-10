@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>3.1.0</Version>
+    <Version>3.1.1</Version>
     <Description>Excel 报表生成方案。</Description>
     <Copyright>Copyright 2015</Copyright>
     <PackageLicenseUrl>https://github.com/hanzhaoxin/ExcelReport/blob/master/License.txt</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/hanzhaoxin/ExcelReport</PackageProjectUrl>
-    <PackageIconUrl>http://images.cnblogs.com/cnblogs_com/hanzhaoxin/638238/o_ExcelReport.png</PackageIconUrl>
+    <PackageIconUrl>http://images.cnblogs.com/cnblogs_com/hanzhaoxin/638238/o_e-r-1.png</PackageIconUrl>
     <PackageReleaseNotes>添加适配层，为支持更多的底层驱动包做准备。</PackageReleaseNotes>
   </PropertyGroup>
 
@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ExcelReport.Driver" Version="1.0.0" />
+    <PackageReference Include="ExcelReport.Driver" Version="1.0.1" />
   </ItemGroup>
 
 </Project>

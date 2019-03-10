@@ -4,7 +4,18 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <SignAssembly>false</SignAssembly>
+    <Description>csv driver of ExcelReport .</Description>
+    <PackageIconUrl>https://www.cnblogs.com/images/cnblogs_com/hanzhaoxin/638238/o_e-csv.png</PackageIconUrl>
+    <PackageLicenseUrl>https://github.com/hanzhaoxin/ExcelReport/blob/master/License.txt</PackageLicenseUrl>
+    <Copyright>Copyright 2019</Copyright>
+    <PackageProjectUrl>https://github.com/hanzhaoxin/ExcelReport</PackageProjectUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="第一步.bat" />
+    <None Remove="第三步.bat" />
+    <None Remove="第二步.bat" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AxinLib.IO.CSV" Version="1.0.0" />

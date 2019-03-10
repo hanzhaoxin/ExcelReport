@@ -7,7 +7,8 @@
     <PackageLicenseUrl>https://github.com/hanzhaoxin/ExcelReport/blob/master/License.txt</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/hanzhaoxin/ExcelReport</PackageProjectUrl>
     <PackageIconUrl>http://images.cnblogs.com/cnblogs_com/hanzhaoxin/638238/o_ExcelReport.png</PackageIconUrl>
-    <PackageReleaseNotes>添加适配层，为支持更多的底层驱动包做准备。</PackageReleaseNotes>
+    <PackageReleaseNotes>更新依赖</PackageReleaseNotes>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ExcelReport.Driver" Version="1.0.0" />
+    <PackageReference Include="ExcelReport.Driver" Version="1.0.1" />
     <PackageReference Include="NPOI" Version="2.4.1" />
     <PackageReference Include="NPOI.Extend" Version="1.0.8" />
   </ItemGroup>
