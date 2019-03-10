@@ -8,9 +8,10 @@ namespace ExcelReport.Driver.CSV
     {
         public IWorkbook Load(string filePath)
         {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             var workbook = new Workbook();
             var sheet = workbook[Path.GetFileNameWithoutExtension(filePath)];
-            using (var streamReader = new StreamReader(filePath, Encoding.UTF8))
+            using (var streamReader = new StreamReader(filePath, Encoding.GetEncoding("GB2312")))
             {
                 var csvReader = new CsvReader(streamReader);
                 Field field;
