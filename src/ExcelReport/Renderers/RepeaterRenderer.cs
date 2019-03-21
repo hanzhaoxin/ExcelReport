@@ -28,16 +28,20 @@ namespace ExcelReport.Renderers
                 throw new RenderException($"RepeaterRenderer[{repeater.Name}] is empty");
             }
 
-            foreach (var item in DataSource)
+            if (!DataSource.IsNull())
             {
-                sheetContext.CopyRepeaterTemplate(repeater, () =>
+                foreach (var item in DataSource)
                 {
-                    foreach (var renderer in RendererList)
+                    sheetContext.CopyRepeaterTemplate(repeater, () =>
                     {
-                        renderer.Render(sheetContext, item);
-                    }
-                });
+                        foreach (var renderer in RendererList)
+                        {
+                            renderer.Render(sheetContext, item);
+                        }
+                    });
+                }
             }
+            
             sheetContext.RemoveRepeaterTemplate(repeater);
         }
 
@@ -68,16 +72,21 @@ namespace ExcelReport.Renderers
                 throw new RenderException($"RepeaterRenderer[{repeater.Name}] is empty");
             }
 
-            foreach (var item in DgSetDataSource(dataSource))
+            var items = DgSetDataSource(dataSource);
+            if (!items.IsNull())
             {
-                sheetContext.CopyRepeaterTemplate(repeater, () =>
+                foreach (var item in items)
                 {
-                    foreach (var renderer in RendererList)
+                    sheetContext.CopyRepeaterTemplate(repeater, () =>
                     {
-                        renderer.Render(sheetContext, item);
-                    }
-                });
+                        foreach (var renderer in RendererList)
+                        {
+                            renderer.Render(sheetContext, item);
+                        }
+                    });
+                }
             }
+            
             sheetContext.RemoveRepeaterTemplate(repeater);
         }
 
