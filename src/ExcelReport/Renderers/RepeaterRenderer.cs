@@ -41,7 +41,7 @@ namespace ExcelReport.Renderers
                     });
                 }
             }
-            
+
             sheetContext.RemoveRepeaterTemplate(repeater);
         }
 
@@ -86,7 +86,7 @@ namespace ExcelReport.Renderers
                     });
                 }
             }
-            
+
             sheetContext.RemoveRepeaterTemplate(repeater);
         }
 
