@@ -132,8 +132,10 @@ public static class StudentLogic
 
 
 
+### 更多文章
+[ExcelReport文档](https://www.yuque.com/motse/excelreport)
 
-## 联系我(QQ Group:116476496)
+### 联系我(QQ Group:116476496)
 ![image.jpg](https://www.cnblogs.com/images/cnblogs_com/hanzhaoxin/638238/o_er%e7%be%a4.jpg#align=left&display=inline&width=260)
 
 
