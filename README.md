@@ -26,107 +26,63 @@ ExcelReport是一个Excel模板渲染引擎。 它基于关注点分离的理念
 
 ```csharp
 internal class Program
-
 {
 
        private static void Main(string[] args)
-
        {
-
            // 项目启动时，添加
-
            Configurator.Put(".xlsx", new WorkbookLoader());
 
-
-
            var num = 1;
-
            ExportHelper.ExportToLocal(@"templates\student.xlsx", "out.xlsx",
-
                    new SheetRenderer("Students",
-
                        new RepeaterRenderer<StudentInfo>("Roster", StudentLogic.GetList(),
-
                            new ParameterRenderer<StudentInfo>("No", t => num++),
-
                            new ParameterRenderer<StudentInfo>("Name", t => t.Name),
-
                            new ParameterRenderer<StudentInfo>("Gender", t => t.Gender ? "男" : "女"),
-
                            new ParameterRenderer<StudentInfo>("Class", t => t.Class),
-
                            new ParameterRenderer<StudentInfo>("RecordNo", t => t.RecordNo),
-
                            new ParameterRenderer<StudentInfo>("Phone", t => t.Phone),
-
                            new ParameterRenderer<StudentInfo>("Email", t => t.Email)
-
                            ),
-
                         new ParameterRenderer("Author", "hzx")
-
                        )
-
                    );
-
            Console.WriteLine("finished!");
-
            Console.ReadKey();
-
        }
-
 }
 ```
 
 ```csharp
 public class StudentInfo
-
 {
-
        public string Name { get; set; }
-
        public bool Gender { get; set; }
-
        public string Class { get; set; }
-
        public string RecordNo { get; set; }
-
        public string Phone { get; set; }
-
        public string Email { get; set; }
-
 }
 ```
 
 ```csharp
 public static class StudentLogic
-
 {
-
        public static List<StudentInfo> GetList()
-
        {
-
            List<StudentInfo> list = new List<StudentInfo>();
-
            list.Add(new StudentInfo() { Class = "一班", Name = "XXX01", Gender = true, RecordNo = "YYY0001", Phone = "158******01", Email = "xxx01@live.cn" });
-
            list.Add(new StudentInfo() { Class = "二班", Name = "XXX02", Gender = false, RecordNo = "YYY0002", Phone = "158******02", Email = "xxx02@live.cn" });
-
            list.Add(new StudentInfo() { Class = "一班", Name = "XXX03", Gender = true, RecordNo = "YYY0003", Phone = "158******03", Email = "xxx03@live.cn" });
-
            list.Add(new StudentInfo() { Class = "一班", Name = "XXX04", Gender = true, RecordNo = "YYY0004", Phone = "158******04", Email = "xxx04@live.cn" });
-
            return list;
-
        }
-
 }
 ```
 
 
 * 输出结果
-
 ![image.png](https://cdn.nlark.com/yuque/0/2019/png/297115/1553998004321-0116c3dc-6980-4ef9-87b0-fd625c0e6602.png#align=left&display=inline&height=330&name=image.png&originHeight=412&originWidth=1025&size=24277&status=done&width=820)
 
 
