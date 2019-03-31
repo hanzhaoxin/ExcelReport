@@ -133,7 +133,7 @@ public static class StudentLogic
 
 
 
-## 联系我
-QQ Group:116476496![image.jpg](https://www.cnblogs.com/images/cnblogs_com/hanzhaoxin/638238/o_er%e7%be%a4.jpg#align=left&display=inline&width=260)
+## 联系我(QQ Group:116476496)
+![image.jpg](https://www.cnblogs.com/images/cnblogs_com/hanzhaoxin/638238/o_er%e7%be%a4.jpg#align=left&display=inline&width=260)
 
 
