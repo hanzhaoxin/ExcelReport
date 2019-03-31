@@ -9,6 +9,9 @@
     <PackageLicenseUrl>https://github.com/hanzhaoxin/ExcelReport/blob/master/License.txt</PackageLicenseUrl>
     <Copyright>Copyright 2019</Copyright>
     <PackageProjectUrl>https://github.com/hanzhaoxin/ExcelReport</PackageProjectUrl>
+    <PackageReleaseNotes>update dependencies</PackageReleaseNotes>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,7 +22,7 @@
 
   <ItemGroup>
     <PackageReference Include="AxinLib.IO.CSV" Version="1.0.0" />
-    <PackageReference Include="ExcelReport.Driver" Version="1.0.0" />
+    <PackageReference Include="ExcelReport.Driver" Version="1.0.1" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.1" />
   </ItemGroup>
 
