@@ -17,7 +17,7 @@ namespace ExcelReport.Renderers
             Value = value;
         }
 
-        public void Render(SheetContext sheetContext)
+        public virtual void Render(SheetContext sheetContext)
         {
             Parameter parameter = sheetContext.WorksheetContainer.Parameters[Name];
             foreach (var location in parameter.Locations)
@@ -50,7 +50,7 @@ namespace ExcelReport.Renderers
             DgSetValue = dgSetValue;
         }
 
-        public void Render(SheetContext sheetContext, TSource dataSource)
+        public virtual void Render(SheetContext sheetContext, TSource dataSource)
         {
             Parameter parameter = sheetContext.WorksheetContainer.Parameters[Name];
             foreach (var location in parameter.Locations)

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace ExcelReport.Renderers
 {
-    public sealed class SheetRenderer : Named
+    public class SheetRenderer : Named
     {
         private IList<IElementRenderer> RendererList { set; get; }
 
@@ -15,7 +15,7 @@ namespace ExcelReport.Renderers
             RendererList = new List<IElementRenderer>(elementRenderers);
         }
 
-        public void Render(WorkbookContext workbookContext)
+        public virtual void Render(WorkbookContext workbookContext)
         {
             var worksheetContext = workbookContext[Name];
             if (worksheetContext.IsNull() || worksheetContext.IsEmpty())

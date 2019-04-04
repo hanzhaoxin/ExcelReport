@@ -20,7 +20,7 @@ namespace ExcelReport.Renderers
             RendererList = new List<IEmbeddedRenderer<TItem>>(renderers);
         }
 
-        public void Render(SheetContext sheetContext)
+        public virtual void Render(SheetContext sheetContext)
         {
             Repeater repeater = sheetContext.WorksheetContainer.Repeaters[Name];
             if (RendererList.IsNullOrEmpty())
@@ -64,7 +64,7 @@ namespace ExcelReport.Renderers
             RendererList = new List<IEmbeddedRenderer<TItem>>(renderers);
         }
 
-        public void Render(SheetContext sheetContext, TSource dataSource)
+        public virtual void Render(SheetContext sheetContext, TSource dataSource)
         {
             Repeater repeater = sheetContext.WorksheetContainer.Repeaters[Name];
             if (RendererList.IsNullOrEmpty())
