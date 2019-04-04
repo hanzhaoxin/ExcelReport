@@ -4,6 +4,7 @@ using ExcelReport.Extends;
 using ExcelReport.Meta;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ExcelReport.Renderers
 {
@@ -20,6 +21,12 @@ namespace ExcelReport.Renderers
             RendererList = new List<IEmbeddedRenderer<TItem>>(renderers);
         }
 
+        public int SortNum(SheetContext sheetContext)
+        {
+            Repeater repeater = sheetContext.WorksheetContainer.Repeaters[Name];
+            return repeater.Start.RowIndex;
+        }
+
         public virtual void Render(SheetContext sheetContext)
         {
             Repeater repeater = sheetContext.WorksheetContainer.Repeaters[Name];
@@ -34,7 +41,7 @@ namespace ExcelReport.Renderers
                 {
                     sheetContext.CopyRepeaterTemplate(repeater, () =>
                     {
-                        foreach (var renderer in RendererList)
+                        foreach (var renderer in RendererList.OrderBy(renderer => renderer.SortNum(sheetContext)))
                         {
                             renderer.Render(sheetContext, item);
                         }
@@ -64,6 +71,12 @@ namespace ExcelReport.Renderers
             RendererList = new List<IEmbeddedRenderer<TItem>>(renderers);
         }
 
+        public int SortNum(SheetContext sheetContext)
+        {
+            Repeater repeater = sheetContext.WorksheetContainer.Repeaters[Name];
+            return repeater.Start.RowIndex;
+        }
+
         public virtual void Render(SheetContext sheetContext, TSource dataSource)
         {
             Repeater repeater = sheetContext.WorksheetContainer.Repeaters[Name];
@@ -79,7 +92,7 @@ namespace ExcelReport.Renderers
                 {
                     sheetContext.CopyRepeaterTemplate(repeater, () =>
                     {
-                        foreach (var renderer in RendererList)
+                        foreach (var renderer in RendererList.OrderBy(renderer => renderer.SortNum(sheetContext)))
                         {
                             renderer.Render(sheetContext, item);
                         }

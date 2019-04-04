@@ -2,6 +2,7 @@
 using ExcelReport.Extends;
 using ExcelReport.Meta;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ExcelReport.Renderers
 {
@@ -22,7 +23,7 @@ namespace ExcelReport.Renderers
             {
                 return;
             }
-            foreach (var renderer in RendererList)
+            foreach (var renderer in RendererList.OrderBy(renderer => renderer.SortNum(worksheetContext)))
             {
                 renderer.Render(worksheetContext);
             }

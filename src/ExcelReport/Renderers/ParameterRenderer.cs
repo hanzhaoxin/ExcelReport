@@ -4,6 +4,7 @@ using ExcelReport.Exceptions;
 using ExcelReport.Extends;
 using ExcelReport.Meta;
 using System;
+using System.Linq;
 
 namespace ExcelReport.Renderers
 {
@@ -15,6 +16,12 @@ namespace ExcelReport.Renderers
         {
             Name = name;
             Value = value;
+        }
+
+        public int SortNum(SheetContext sheetContext)
+        {
+            Parameter parameter = sheetContext.WorksheetContainer.Parameters[Name];
+            return parameter.Locations.Min(location => location.RowIndex);
         }
 
         public virtual void Render(SheetContext sheetContext)
@@ -48,6 +55,12 @@ namespace ExcelReport.Renderers
         {
             Name = name;
             DgSetValue = dgSetValue;
+        }
+
+        public int SortNum(SheetContext sheetContext)
+        {
+            Parameter parameter = sheetContext.WorksheetContainer.Parameters[Name];
+            return parameter.Locations.Min(location => location.RowIndex);
         }
 
         public virtual void Render(SheetContext sheetContext, TSource dataSource)

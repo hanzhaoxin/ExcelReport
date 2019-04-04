@@ -2,7 +2,7 @@
 
 namespace ExcelReport.Renderers
 {
-    public interface IElementRenderer
+    public interface IElementRenderer : ISortable
     {
         void Render(SheetContext sheetContext);
     }
