@@ -17,5 +17,10 @@ namespace ExcelReport.Driver.NPOI
         public int ColumnIndex => NpoiCell.ColumnIndex;
 
         public object Value { get => NpoiCell.GetValue(); set => NpoiCell.SetValue(value); }
+
+        public object GetOriginal()
+        {
+            return NpoiCell;
+        }
     }
 }

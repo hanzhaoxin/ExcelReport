@@ -42,5 +42,10 @@ namespace ExcelReport.Driver.CSV
                 builder.Append(Constant.ESCAPE);
             }
         }
+
+        public object GetOriginal()
+        {
+            return this;
+        }
     }
 }

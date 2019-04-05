@@ -68,5 +68,10 @@ namespace ExcelReport.Driver.CSV
             }
             builder.Append(Constant.ROW_END);
         }
+
+        public object GetOriginal()
+        {
+            return this;
+        }
     }
 }

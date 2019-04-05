@@ -1,6 +1,6 @@
 ﻿namespace ExcelReport.Driver
 {
-    public interface ICell
+    public interface ICell : IAdapter
     {
         int RowIndex { get; }
 

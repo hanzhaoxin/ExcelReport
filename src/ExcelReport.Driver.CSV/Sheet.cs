@@ -88,5 +88,10 @@ namespace ExcelReport.Driver.CSV
                 row.AppendTo(builder);
             }
         }
+
+        public object GetOriginal()
+        {
+            return this;
+        }
     }
 }

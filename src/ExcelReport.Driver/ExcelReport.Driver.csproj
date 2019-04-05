@@ -7,8 +7,10 @@
     <PackageLicenseUrl>https://github.com/hanzhaoxin/ExcelReport/blob/master/License.txt</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/hanzhaoxin/ExcelReport</PackageProjectUrl>
     <PackageIconUrl>https://www.cnblogs.com/images/cnblogs_com/hanzhaoxin/638238/o_e-i-2.png</PackageIconUrl>
-    <PackageReleaseNotes>更新图标</PackageReleaseNotes>
-    <Version>1.0.1</Version>
+    <PackageReleaseNotes>添加获取被代理对象的接口，方便用户自己扩展。</PackageReleaseNotes>
+    <Version>2.0.0</Version>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

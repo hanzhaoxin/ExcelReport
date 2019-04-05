@@ -2,7 +2,7 @@
 
 namespace ExcelReport.Driver
 {
-    public interface IWorkbook : IEnumerable<ISheet>
+    public interface IWorkbook : IEnumerable<ISheet>, IAdapter
     {
         ISheet this[string sheetName]
         {

@@ -47,5 +47,10 @@ namespace ExcelReport.Driver.CSV
                 sheet.AppendTo(builder);
             }
         }
+
+        public object GetOriginal()
+        {
+            return this;
+        }
     }
 }

@@ -29,5 +29,10 @@ namespace ExcelReport.Driver.NPOI
         {
             return GetEnumerator();
         }
+
+        public object GetOriginal()
+        {
+            return NpoiRow;
+        }
     }
 }
