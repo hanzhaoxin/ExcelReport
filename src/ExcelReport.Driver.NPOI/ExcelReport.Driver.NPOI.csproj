@@ -7,8 +7,8 @@
     <PackageLicenseUrl>https://github.com/hanzhaoxin/ExcelReport/blob/master/License.txt</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/hanzhaoxin/ExcelReport</PackageProjectUrl>
     <PackageIconUrl>http://images.cnblogs.com/cnblogs_com/hanzhaoxin/638238/o_ExcelReport.png</PackageIconUrl>
-    <PackageReleaseNotes>添加获取被代理对象的接口，方便用户自己扩展。</PackageReleaseNotes>
-    <Version>2.0.0</Version>
+    <PackageReleaseNotes>公式来了，支持Repeater范围内的公式。</PackageReleaseNotes>
+    <Version>2.0.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
@@ -24,7 +24,7 @@
   <ItemGroup>
     <PackageReference Include="ExcelReport.Driver" Version="2.0.0" />
     <PackageReference Include="NPOI" Version="2.4.1" />
-    <PackageReference Include="NPOI.Extend" Version="1.1.0" />
+    <PackageReference Include="NPOI.Extend" Version="1.1.1" />
   </ItemGroup>
 
 </Project>
