@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>3.1.4</Version>
+    <Version>3.1.5</Version>
     <Description>Excel 报表生成方案。</Description>
     <Copyright>Copyright 2015</Copyright>
     <PackageLicenseUrl>https://github.com/hanzhaoxin/ExcelReport/blob/master/License.txt</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/hanzhaoxin/ExcelReport</PackageProjectUrl>
     <PackageIconUrl>http://images.cnblogs.com/cnblogs_com/hanzhaoxin/638238/o_e-r-1.png</PackageIconUrl>
-    <PackageReleaseNotes>fix bug (代码中标签渲染顺序和模板中标签不一致时，会漏渲染的问题。.)</PackageReleaseNotes>
+    <PackageReleaseNotes>fix bug (多层嵌套Repeater时多个结束标签同行的问题。)</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
