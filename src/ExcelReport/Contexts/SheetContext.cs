@@ -43,10 +43,10 @@ namespace ExcelReport.Contexts
 
             int span = _sheet.CopyRows(startRowIndex, endRowIndex);
             ICell startCell = GetCell(repeater.Start);
-            startCell.Value = startCell.GetStringValue().Replace($"<[{repeater.Name}]", String.Empty);
+            startCell.Value = startCell.GetStringValue().CutEndOf($"<[{repeater.Name}]");
             processTemplate();
             ICell endCell = GetCell(repeater.End);
-            endCell.Value = endCell.GetStringValue().Replace($">[{repeater.Name}]", String.Empty);
+            endCell.Value = endCell.GetStringValue().CutStartOf($">[{repeater.Name}]");
             _rowIndexAccumulation.Add(span);
         }
 
