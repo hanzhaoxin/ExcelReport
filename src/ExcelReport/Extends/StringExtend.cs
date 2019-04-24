@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ExcelReport.Extends
+﻿namespace ExcelReport.Extends
 {
     public static class StringExtend
     {
-        public static string CutStartOf(this string self,string value)
+        public static string CutStartOf(this string self, string value)
         {
             var idx = self.IndexOf(value);
             if (idx < 0)
