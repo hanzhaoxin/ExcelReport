@@ -21,8 +21,12 @@ namespace ExcelReport.Renderers
         public int SortNum(SheetContext sheetContext)
         {
             Parameter parameter = sheetContext.WorksheetContainer.Parameters[Name];
+            if (parameter.Locations.IsNullOrEmpty())
+            {
+                throw new TemplateException($"parameter[{parameter.Name}] non-existent.");
+            }
             return parameter.Locations.Min(location => location.RowIndex);
-        }
+        } 
 
         public virtual void Render(SheetContext sheetContext)
         {
@@ -60,6 +64,10 @@ namespace ExcelReport.Renderers
         public int SortNum(SheetContext sheetContext)
         {
             Parameter parameter = sheetContext.WorksheetContainer.Parameters[Name];
+            if (parameter.Locations.IsNullOrEmpty())
+            {
+                throw new TemplateException($"parameter[{parameter.Name}] non-existent.");
+            }
             return parameter.Locations.Min(location => location.RowIndex);
         }
 

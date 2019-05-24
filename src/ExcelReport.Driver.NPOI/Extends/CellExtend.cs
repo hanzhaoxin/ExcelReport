@@ -6,6 +6,10 @@ namespace ExcelReport.Driver.NPOI.Extends
     {
         public static Cell GetAdapter(this NpoiCell cell)
         {
+            if (null == cell)
+            {
+                return null;
+            }
             return new Cell(cell);
         }
     }

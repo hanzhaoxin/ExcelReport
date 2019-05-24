@@ -24,6 +24,14 @@ namespace ExcelReport.Renderers
         public int SortNum(SheetContext sheetContext)
         {
             Repeater repeater = sheetContext.WorksheetContainer.Repeaters[Name];
+            if (repeater.Start.IsNull())
+            {
+                throw new TemplateException($"RepeaterRenderer[{repeater.Name}] start non-existent.");
+            }
+            if (repeater.End.IsNull())
+            {
+                throw new TemplateException($"RepeaterRenderer[{repeater.Name}] end non-existent.");
+            }
             return repeater.Start.RowIndex;
         }
 
@@ -74,6 +82,14 @@ namespace ExcelReport.Renderers
         public int SortNum(SheetContext sheetContext)
         {
             Repeater repeater = sheetContext.WorksheetContainer.Repeaters[Name];
+            if (repeater.Start.IsNull())
+            {
+                throw new TemplateException($"RepeaterRenderer[{repeater.Name}] start non-existent.");
+            }
+            if (repeater.End.IsNull())
+            {
+                throw new TemplateException($"RepeaterRenderer[{repeater.Name}] end non-existent.");
+            }
             return repeater.Start.RowIndex;
         }
 
