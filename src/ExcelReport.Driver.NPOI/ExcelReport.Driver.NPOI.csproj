@@ -24,7 +24,7 @@
   <ItemGroup>
     <PackageReference Include="ExcelReport.Driver" Version="2.0.0" />
     <PackageReference Include="NPOI" Version="2.4.1" />
-    <PackageReference Include="NPOI.Extend" Version="1.1.1" />
+    <PackageReference Include="NPOI.Extend" Version="1.1.2" />
   </ItemGroup>
 
 </Project>
