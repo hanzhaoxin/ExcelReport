@@ -7,8 +7,8 @@
     <PackageLicenseUrl>https://github.com/hanzhaoxin/ExcelReport/blob/master/License.txt</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/hanzhaoxin/ExcelReport</PackageProjectUrl>
     <PackageIconUrl>http://images.cnblogs.com/cnblogs_com/hanzhaoxin/638238/o_ExcelReport.png</PackageIconUrl>
-    <PackageReleaseNotes>模板问题明确反馈异常。</PackageReleaseNotes>
-    <Version>2.0.2</Version>
+    <PackageReleaseNotes>简单优化不必要的性能损失。</PackageReleaseNotes>
+    <Version>2.0.3</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
@@ -24,7 +24,7 @@
   <ItemGroup>
     <PackageReference Include="ExcelReport.Driver" Version="2.0.0" />
     <PackageReference Include="NPOI" Version="2.4.1" />
-    <PackageReference Include="NPOI.Extend" Version="1.1.2" />
+    <PackageReference Include="NPOI.Extend" Version="1.1.3" />
   </ItemGroup>
 
 </Project>
