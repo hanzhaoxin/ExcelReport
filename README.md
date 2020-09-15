@@ -91,6 +91,7 @@ public static class StudentLogic
 ### 更多文章
 [ExcelReport文档](https://www.yuque.com/motse/excelreport)
 
-### [npoidevs](https://t.me/npoidevs)
+### 相关用户组
+[npoi users group](https://t.me/npoidevs)
 
 
